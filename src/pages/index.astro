@@ -10,179 +10,176 @@ import { SITE_TITLE } from '../consts';
 	<head>
 		<BaseHead
 			title={`Bridgeit Advisory | ${SITE_TITLE}`}
-			description="Bridging research and real-world AI products."
+			description="Bridging research and ideas into real AI products"
 		/>
 	</head>
 
 	<body>
 		<Header />
 
-		<main class="snap">
-			<!-- HERO -->
-			<section class="panel hero" aria-label="Hero">
-				<div class="heroOverlay"></div>
+		<!--
+			PowerPoint-style scrolling:
+			- We make MAIN the scroll container (not the whole page)
+			- Each section is a full-screen "slide"
+		-->
+		<main class="deck" aria-label="Bridgeit Advisory">
+			<!-- SLIDE 1 -->
+			<section class="slide hero" aria-label="Bridgeit Advisory">
+				<div class="bgOverlay" aria-hidden="true"></div>
 
-				<div class="content">
-					<div class="kicker">
-						<span class="mark" aria-hidden="true">
-							<!-- Simple “bridge” mark -->
-							<svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-								<path d="M4 18V6M20 18V6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-								<path d="M6 18h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-								<path d="M6 13c2.5-4 9.5-4 12 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+				<div class="frame">
+					<div class="brand">
+						<span class="logo" aria-hidden="true">
+							<!-- simple, consulting-style mark: arch + pillar -->
+							<svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+								<path d="M6 18V7" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+								<path d="M18 18V7" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+								<path
+									d="M7 13c2.7-3.6 6.3-3.6 10 0"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+								/>
+								<path d="M6 18h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
 							</svg>
 						</span>
-						<span>Bridgeit Advisory</span>
+						<span class="brandName">Bridgeit Advisory</span>
 					</div>
 
-					<h1>
-						Bridging research and real-world AI products.
-					</h1>
+					<h1>Bridgeit Advisory</h1>
+					<p class="tagline">Bridging research and ideas into real AI products</p>
 
-					<p class="lede">
-						Strategic, founder-led advisory for founders, builders, and researchers turning complex ideas and early demos
-						into credible AI systems.
-					</p>
-
-					<div class="actions">
-						<a class="btn primary" href="#contact">Send a message</a>
-						<a class="btn ghost" href="#what">How we help</a>
-					</div>
-
-					<p class="micro">Founder-led. Intentionally limited capacity.</p>
-				</div>
-			</section>
-
-			<!-- WHAT -->
-			<section class="panel" id="what" aria-label="What we do">
-				<div class="content">
-					<h2>What We Do</h2>
-					<p class="lede">
-						Bridgeit provides strategic AI and research-to-product advisory.
-					</p>
-					<p>
-						We help founders, freelancers, and researchers translate ideas, research, and early demos into product direction,
-						system design, and industry-ready delivery plans.
-					</p>
-					<p class="muted">
-						Our focus is clarity, direction, and decision-making — not outsourced execution.
-					</p>
-
-					<div class="chips" aria-label="Focus areas">
-						<span class="chip">Product direction</span>
-						<span class="chip">AI architecture</span>
-						<span class="chip">MVP scoping</span>
-						<span class="chip">Evaluation strategy</span>
-						<span class="chip">Risk review</span>
+					<div class="heroActions">
+						<a class="btn primary" href="#contact">Contact</a>
+						<a class="btn ghost" href="#what">What We Do</a>
 					</div>
 				</div>
 			</section>
 
-			<!-- HOW -->
-			<section class="panel" aria-label="How we help">
-				<div class="content">
-					<h2>How We Help</h2>
-
-					<div class="grid">
-						<div class="card">
-							<h3>Translate ideas → product direction</h3>
-							<p>Turn research or demos into a concrete product path and what to validate first.</p>
-						</div>
-						<div class="card">
-							<h3>Architecture & system decisions</h3>
-							<p>RAG vs fine-tune, data strategy, eval design, deployment constraints, and tradeoffs.</p>
-						</div>
-						<div class="card">
-							<h3>MVP scoping</h3>
-							<p>What to build now, what to defer, what to discard — so you don’t overbuild.</p>
-						</div>
-						<div class="card">
-							<h3>Review prototypes</h3>
-							<p>Hands-on feedback on experiments, demos, prompts, retrieval setup, and evaluation.</p>
-						</div>
-						<div class="card">
-							<h3>Risk identification</h3>
-							<p>Surface technical, data, and evaluation risks early — before they become months.</p>
-						</div>
-						<div class="card">
-							<h3>Next steps</h3>
-							<p>Leave with a 1–4 week plan you can execute immediately with confidence.</p>
-						</div>
+			<!-- SLIDE 2 -->
+			<section class="slide" id="what" aria-label="What We Do">
+				<div class="frame">
+					<div class="panel">
+						<h2>What We Do</h2>
+						<p class="lead">
+							Bridgeit provides strategic, founder-led AI and research-to-product advisory.
+						</p>
+						<p>
+							We help founders, freelancers, and researchers turn complex ideas, research, and early demos
+							into credible AI products and industry-ready systems.
+						</p>
+						<p class="muted">
+							Our focus is clarity, direction, and decision-making, not outsourced execution.
+						</p>
 					</div>
-
-					<p class="muted" style="margin-top: 18px;">
-						The goal is to avoid building the wrong thing and move faster with confidence.
-					</p>
 				</div>
 			</section>
 
-			<!-- WHO -->
-			<section class="panel" aria-label="Who we work with">
-				<div class="content">
-					<h2>Who We Work With</h2>
-
-					<div class="twoCol">
-						<div class="card soft">
-							<h3>We work with</h3>
-							<ul>
-								<li>Startup founders building AI-driven products</li>
-								<li>Freelancers and independent builders</li>
-								<li>PhDs, postdocs, and MScs transitioning to industry</li>
-								<li>Research-driven teams validating applied directions</li>
-							</ul>
-						</div>
-
-						<div class="card soft">
-							<h3>We do not work with</h3>
-							<ul>
-								<li>Large enterprises</li>
-								<li>Outsourced implementation projects</li>
-								<li>Teams looking for full development or delivery</li>
-							</ul>
-						</div>
+			<!-- SLIDE 3 -->
+			<section class="slide" aria-label="How We Help">
+				<div class="frame">
+					<div class="panel">
+						<h2>How We Help</h2>
+						<p>We work with clients on:</p>
+						<ul class="bullets">
+							<li>Translating research or ideas into concrete product directions</li>
+							<li>Applied AI architecture and system-level decisions</li>
+							<li>MVP scoping: what to build, validate, or discard</li>
+							<li>Reviewing demos, experiments, and early prototypes</li>
+							<li>Identifying technical, data, and evaluation risks early</li>
+						</ul>
+						<p class="muted">
+							The goal is to avoid building the wrong thing and move faster with confidence.
+						</p>
 					</div>
-
-					<p class="note">If you’re unsure, send a short note — we’ll tell you quickly if it’s a fit.</p>
 				</div>
 			</section>
 
-			<!-- CONTACT -->
-			<section class="panel contact" id="contact" aria-label="Contact">
-				<div class="content">
-					<h2>How can we help?</h2>
-					<p class="lede">Send a short message. Include what you’re building, and where you’re stuck.</p>
+			<!-- SLIDE 4 -->
+			<section class="slide" aria-label="How We Work">
+				<div class="frame">
+					<div class="panel">
+						<h2>How We Work</h2>
+						<p>
+							We start with an exploratory conversation to understand context, goals, and constraints.
+							For teams that find value, we continue through hourly strategic advisory, delivered via:
+						</p>
+						<ul class="bullets">
+							<li>live discussions</li>
+							<li>async review of documents, designs, experiments, or prototypes</li>
+						</ul>
+						<p class="muted">
+							Work is founder-led and intentionally limited to ensure depth and quality.
+						</p>
+					</div>
+				</div>
+			</section>
 
-					<!-- OPTION A (recommended): Formspree -->
-					<!-- 1) Create a Formspree form -> get your endpoint URL -->
-					<!-- 2) Replace ACTION below -->
-					<form class="form" method="POST" action="https://formspree.io/f/REPLACE_ME">
-						<div class="row">
+			<!-- SLIDE 5 -->
+			<section class="slide" aria-label="Who We Work With">
+				<div class="frame">
+					<div class="panel">
+						<h2>Who We Work With</h2>
+
+						<div class="twoCol">
+							<div class="card">
+								<h3>We work with</h3>
+								<ul class="bullets">
+									<li>Startup founders building AI-driven products</li>
+									<li>Freelancers and independent builders</li>
+									<li>PhDs, postdocs, and MScs transitioning to industry</li>
+									<li>Research-driven teams validating applied directions</li>
+								</ul>
+							</div>
+
+							<div class="card">
+								<h3>We do not work with</h3>
+								<ul class="bullets">
+									<li>Large enterprises</li>
+									<li>Outsourced implementation projects</li>
+									<li>Teams looking for full development or delivery</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- SLIDE 6 -->
+			<section class="slide" id="contact" aria-label="Contact">
+				<div class="frame">
+					<div class="panel">
+						<h2>Contact</h2>
+						<p class="lead">Exploratory conversations are available by referral or direct outreach.</p>
+						<p class="emailLine">📧 <a href="mailto:contact@bridgeitadvisory.com">contact@bridgeitadvisory.com</a></p>
+
+						<!-- Contact form (clean + professional).
+							Recommended: Formspree / Basin / Getform.
+							Replace the action URL with your endpoint.
+						-->
+						<form class="form" method="POST" action="https://formspree.io/f/REPLACE_ME">
+							<div class="row">
+								<label>
+									Name
+									<input name="name" type="text" autocomplete="name" required />
+								</label>
+								<label>
+									Email
+									<input name="email" type="email" autocomplete="email" required />
+								</label>
+							</div>
+
 							<label>
-								Name
-								<input name="name" type="text" required placeholder="Your name" />
+								Message
+								<textarea name="message" rows="6" required></textarea>
 							</label>
-							<label>
-								Email
-								<input name="email" type="email" required placeholder="you@company.com" />
-							</label>
-						</div>
 
-						<label>
-							Message
-							<textarea name="message" rows="6" required placeholder="3–5 lines is enough."></textarea>
-						</label>
-
-						<div class="actions">
-							<button class="btn primary" type="submit">Send</button>
-							<a class="btn ghost" href="mailto:contact@bridgeitadvisory.com">Or email us</a>
-						</div>
-
-						<p class="micro">We typically reply within 24–48 hours.</p>
-					</form>
-
-					<p class="muted" style="margin-top: 18px;">
-						Prefer email: <a href="mailto:contact@bridgeitadvisory.com">contact@bridgeitadvisory.com</a>
-					</p>
+							<div class="formActions">
+								<button class="btn primary" type="submit">Send</button>
+								<a class="btn ghost" href="mailto:contact@bridgeitadvisory.com">Email instead</a>
+							</div>
+						</form>
+					</div>
 				</div>
 			</section>
 		</main>
@@ -190,183 +187,249 @@ import { SITE_TITLE } from '../consts';
 		<Footer />
 
 		<style>
-			:global(html) { scroll-behavior: smooth; }
+			/* ===== Background image + palette tuned for your bridge photo ===== */
 			:global(body) {
 				margin: 0;
-				background: #070a0f;
-				color: #e9eefc;
-			}
-
-			/* Slide behavior */
-			.snap { scroll-snap-type: y mandatory; }
-			.panel {
-				min-height: 100vh;
-				display: grid;
-				place-items: center;
-				scroll-snap-align: start;
-				padding: 80px 22px;
-				background: radial-gradient(1200px 600px at 20% 0%, rgba(255,255,255,0.06), transparent 60%),
-				            linear-gradient(180deg, rgba(255,255,255,0.02), transparent 60%);
-				border-top: 1px solid rgba(255,255,255,0.06);
-			}
-
-			.content {
-				width: 100%;
-				max-width: 980px;
-			}
-
-			/* Hero */
-			.hero {
-				position: relative;
-				border-top: 0;
+				color: #eef3ff;
+				background: #05070b;
+				/* Use your attached image as fixed site background */
 				background-image: url('/hero-bridge.jpg');
 				background-size: cover;
 				background-position: center;
-			}
-			.heroOverlay {
-				position: absolute;
-				inset: 0;
-				background: linear-gradient(90deg, rgba(7,10,15,0.92) 0%, rgba(7,10,15,0.72) 48%, rgba(7,10,15,0.35) 100%),
-				            radial-gradient(900px 500px at 20% 20%, rgba(245,201,130,0.12), transparent 60%);
-			}
-			.hero .content { position: relative; }
-			.kicker {
-				display: inline-flex;
-				gap: 10px;
-				align-items: center;
-				font-size: 14px;
-				letter-spacing: 0.08em;
-				text-transform: uppercase;
-				opacity: 0.8;
-				margin-bottom: 18px;
-			}
-			.mark {
-				display: inline-flex;
-				width: 28px;
-				height: 28px;
-				align-items: center;
-				justify-content: center;
-				border-radius: 10px;
-				background: rgba(255,255,255,0.06);
-				border: 1px solid rgba(255,255,255,0.10);
+				background-attachment: fixed;
+				overflow: hidden; /* important: make MAIN the scroll container */
 			}
 
-			h1 {
-				font-size: 64px;
-				letter-spacing: -0.03em;
-				line-height: 1.02;
-				margin: 0 0 16px;
-				max-width: 18ch;
+			/* Global typography smoothing */
+			:global(*) { box-sizing: border-box; }
+			:global(html) { scroll-behavior: smooth; }
+
+			/* ===== PPT-style scrolling container ===== */
+			.deck {
+				height: calc(100vh - 0px);
+				overflow-y: auto;
+				scroll-snap-type: y mandatory;
+				scroll-padding-top: 16px;
+				-webkit-overflow-scrolling: touch;
 			}
+
+			/* hide scrollbar without breaking scroll */
+			.deck::-webkit-scrollbar { width: 10px; }
+			.deck::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.08); border-radius: 999px; }
+			.deck::-webkit-scrollbar-track { background: transparent; }
+
+			.slide {
+				min-height: 100vh;
+				scroll-snap-align: start;
+				scroll-snap-stop: always; /* makes snapping feel stronger */
+				display: grid;
+				align-items: center;
+				padding: 72px 5vw;
+				position: relative;
+			}
+
+			/* “slide overlay” so text is always readable on your warm/city photo */
+			.slide::before {
+				content: "";
+				position: absolute;
+				inset: 0;
+				background:
+					radial-gradient(1200px 700px at 15% 20%, rgba(13, 18, 30, 0.65), rgba(5,7,11,0.88) 60%),
+					linear-gradient(180deg, rgba(5,7,11,0.60) 0%, rgba(5,7,11,0.82) 60%, rgba(5,7,11,0.92) 100%);
+				pointer-events: none;
+			}
+
+			/* Content should feel “slide-like”, not a narrow book page */
+			.frame {
+				position: relative;
+				width: min(1180px, 100%);
+				margin: 0 auto;
+			}
+
+			/* Panel look (clean, premium, subtle) */
+			.panel {
+				background: rgba(6, 8, 12, 0.45);
+				border: 1px solid rgba(255, 255, 255, 0.10);
+				border-radius: 22px;
+				padding: clamp(22px, 3vw, 36px);
+				backdrop-filter: blur(10px);
+				-webkit-backdrop-filter: blur(10px);
+				box-shadow: 0 18px 60px rgba(0, 0, 0, 0.35);
+			}
+
+			/* HERO overrides */
+			.hero::before {
+				/* slightly lighter on the hero so image shows through more */
+				background:
+					linear-gradient(90deg, rgba(5,7,11,0.88) 0%, rgba(5,7,11,0.70) 48%, rgba(5,7,11,0.45) 100%),
+					radial-gradient(1000px 700px at 15% 25%, rgba(214, 147, 78, 0.18), transparent 60%);
+			}
+			.hero .panel { background: transparent; border: 0; box-shadow: none; padding: 0; }
+			.bgOverlay { display: none; } /* kept for compatibility */
+
+			/* Brand / logo */
+			.brand {
+				display: inline-flex;
+				align-items: center;
+				gap: 12px;
+				margin-bottom: 18px;
+				opacity: 0.95;
+			}
+			.logo {
+				display: inline-flex;
+				width: 40px;
+				height: 40px;
+				align-items: center;
+				justify-content: center;
+				border-radius: 14px;
+				background: rgba(255, 255, 255, 0.06);
+				border: 1px solid rgba(255, 255, 255, 0.14);
+			}
+			.brandName {
+				font-size: 13px;
+				letter-spacing: 0.12em;
+				text-transform: uppercase;
+				opacity: 0.85;
+			}
+
+			/* Type scale */
+			h1 {
+				font-size: clamp(44px, 6vw, 78px);
+				line-height: 1.02;
+				letter-spacing: -0.035em;
+				margin: 0 0 14px;
+				max-width: 16ch;
+			}
+			.tagline {
+				font-size: clamp(18px, 2.2vw, 24px);
+				margin: 0 0 22px;
+				opacity: 0.90;
+				max-width: 50ch;
+			}
+
 			h2 {
-				font-size: 28px;
+				font-size: clamp(22px, 2.6vw, 30px);
 				letter-spacing: -0.02em;
 				margin: 0 0 14px;
 			}
 			h3 {
-				margin: 0 0 10px;
-				font-size: 14px;
-				letter-spacing: 0.1em;
+				font-size: 12px;
+				letter-spacing: 0.14em;
 				text-transform: uppercase;
-				opacity: 0.8;
+				margin: 0 0 12px;
+				opacity: 0.75;
 			}
-
 			p { margin: 0 0 14px; }
-			.lede { font-size: 20px; max-width: 70ch; opacity: 0.92; }
+			.lead { font-size: 18px; opacity: 0.92; max-width: 75ch; }
 			.muted { opacity: 0.78; max-width: 80ch; }
-			.micro { opacity: 0.7; font-size: 13px; margin-top: 10px; }
-
 			a { color: inherit; text-underline-offset: 4px; }
 
-			.actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 18px; }
-
+			/* Buttons */
+			.heroActions, .formActions {
+				display: flex;
+				gap: 12px;
+				flex-wrap: wrap;
+				margin-top: 18px;
+			}
 			.btn {
 				display: inline-flex;
 				align-items: center;
 				justify-content: center;
-				padding: 11px 14px;
-				border-radius: 14px;
+				padding: 12px 16px;
+				border-radius: 999px;
 				font-size: 14px;
 				text-decoration: none;
-				border: 1px solid rgba(255,255,255,0.14);
-				background: rgba(255,255,255,0.04);
+				border: 1px solid rgba(255,255,255,0.16);
+				background: rgba(255,255,255,0.06);
 				color: inherit;
 				cursor: pointer;
+				transition: transform 0.08s ease, background 0.15s ease, border-color 0.15s ease;
 			}
-			.btn:hover { background: rgba(255,255,255,0.06); }
+			.btn:hover {
+				background: rgba(255,255,255,0.09);
+				transform: translateY(-1px);
+			}
+			.btn:active { transform: translateY(0px); }
 
+			/* Warm accent tuned to your sunset/orange image */
 			.primary {
-				background: rgba(245,201,130,0.18);
-				border-color: rgba(245,201,130,0.30);
+				background: rgba(214, 147, 78, 0.20);
+				border-color: rgba(214, 147, 78, 0.42);
 			}
 			.primary:hover {
-				background: rgba(245,201,130,0.24);
+				background: rgba(214, 147, 78, 0.26);
+				border-color: rgba(214, 147, 78, 0.52);
 			}
+			.ghost { background: rgba(255,255,255,0.04); }
 
-			/* Chips */
-			.chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
-			.chip {
-				font-size: 13px;
-				padding: 8px 10px;
-				border-radius: 999px;
-				border: 1px solid rgba(255,255,255,0.10);
-				background: rgba(255,255,255,0.03);
-				opacity: 0.9;
+			/* Lists */
+			.bullets {
+				margin: 10px 0 14px;
+				padding-left: 18px;
+				max-width: 78ch;
 			}
+			.bullets li { margin: 10px 0; }
 
-			/* Cards / grids */
-			.grid {
-				display: grid;
-				grid-template-columns: repeat(3, minmax(0, 1fr));
-				gap: 14px;
-				margin-top: 18px;
-			}
+			/* Who section layout */
 			.twoCol {
 				display: grid;
 				grid-template-columns: 1fr 1fr;
 				gap: 14px;
-				margin-top: 18px;
+				margin-top: 16px;
 			}
 			.card {
 				border: 1px solid rgba(255,255,255,0.10);
-				background: rgba(255,255,255,0.03);
+				background: rgba(255,255,255,0.04);
 				border-radius: 18px;
 				padding: 18px;
 			}
-			.card.soft { background: rgba(255,255,255,0.025); }
 
-			ul { margin: 0; padding-left: 18px; }
-			li { margin: 10px 0; opacity: 0.92; }
+			/* Contact */
+			.emailLine { margin-top: 6px; margin-bottom: 16px; }
 
-			.note {
+			.form {
 				margin-top: 18px;
-				font-style: italic;
-				opacity: 0.75;
+				padding-top: 16px;
+				border-top: 1px solid rgba(255,255,255,0.10);
+				max-width: 920px;
 			}
-
-			/* Form */
-			.form { margin-top: 18px; max-width: 760px; }
-			.row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-			label { display: grid; gap: 8px; font-size: 13px; opacity: 0.85; margin-bottom: 12px; }
+			.row {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 12px;
+			}
+			label {
+				display: grid;
+				gap: 8px;
+				font-size: 13px;
+				opacity: 0.86;
+				margin-bottom: 12px;
+			}
 			input, textarea {
 				width: 100%;
-				padding: 12px 12px;
+				padding: 12px 14px;
 				border-radius: 14px;
-				border: 1px solid rgba(255,255,255,0.14);
-				background: rgba(0,0,0,0.25);
-				color: #e9eefc;
+				border: 1px solid rgba(255,255,255,0.16);
+				background: rgba(0,0,0,0.22);
+				color: #eef3ff;
 				outline: none;
 			}
 			input:focus, textarea:focus {
-				border-color: rgba(245,201,130,0.45);
-				box-shadow: 0 0 0 4px rgba(245,201,130,0.12);
+				border-color: rgba(214, 147, 78, 0.55);
+				box-shadow: 0 0 0 4px rgba(214, 147, 78, 0.18);
 			}
 
+			/* Mobile */
 			@media (max-width: 900px) {
-				h1 { font-size: 44px; }
-				.grid { grid-template-columns: 1fr; }
+				.slide { padding: 64px 22px; }
 				.twoCol { grid-template-columns: 1fr; }
 				.row { grid-template-columns: 1fr; }
+			}
+
+			/* Reduce motion for accessibility */
+			@media (prefers-reduced-motion: reduce) {
+				:global(html) { scroll-behavior: auto; }
+				.btn { transition: none; }
 			}
 		</style>
 	</body>
