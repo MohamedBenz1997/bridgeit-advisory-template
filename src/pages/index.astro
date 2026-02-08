@@ -197,7 +197,7 @@ import { SITE_TITLE } from '../consts';
 			.inner {
 				width: 100%;
 				max-width: 1400px;
-				margin: 0 auto;
+				margin: 0;
 				position: relative;
 			}
 
@@ -218,13 +218,16 @@ import { SITE_TITLE } from '../consts';
 				pointer-events: none;
 			}
 
-			.heroInner { position: relative; }
+			.heroInner { position: relative;
+						 margin-left: 0;
+						 max-width: 1200px;
+			}
 
 			/* move brand row to top-left */
 			.brandRow {
 				position: absolute;
-				top: clamp(18px, 3vw, 28px);
-				left: clamp(18px, 3vw, 28px);
+				top: 28px;
+				left: 28px;
 				display: inline-flex;
 				align-items: center;
 				gap: 14px;
@@ -275,27 +278,30 @@ import { SITE_TITLE } from '../consts';
 			.actions { display: flex; gap: 16px; margin-top: 28px; }
 
 			.btn {
-				display: inline-flex;
-				align-items: center;
-				justify-content: center;
-				gap: 10px;
-				min-height: 64px;
-				padding: 0 34px;
-				font-size: 18px;
-				font-weight: 600;
-				line-height: 1;
-				border-radius: 999px;
-				text-decoration: none;
+			  min-height: 60px;
+			  padding: 0 28px;
+			  font-size: 18px;
+			  border-radius: 999px;
+			
+			  display: inline-flex;
+			  align-items: center;
+			  justify-content: center;
+			
+			  color: rgba(255,255,255,0.92);
+			  text-decoration: none;   /* removes underline */
+			  line-height: 1;          /* helps vertical centering */
 			}
 
 			.primary {
-				background: rgba(255,214,160,0.26);
-				border: 1px solid rgba(255,214,160,0.62);
+			  background: rgba(255,214,160,0.25);
+			  border: 1px solid rgba(255,214,160,0.6);
+			  color: rgba(255,255,255,0.95);
 			}
 
 			.ghost {
-				background: rgba(255,255,255,0.16);
-				border: 1px solid rgba(255,255,255,0.28);
+			  background: rgba(255,255,255,0.15);
+			  border: 1px solid rgba(255,255,255,0.25);
+			  color: rgba(255,255,255,0.92);
 			}
 
 			/* ===== Your existing slide styles (kept) ===== */
