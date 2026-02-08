@@ -36,17 +36,29 @@ import { SITE_TITLE } from '../consts';
 
 			<!-- SLIDE 2 -->
 			<section class="slide s2" id="what" aria-label="What We Do">
-				<div class="inner">
-					<h2>What We Do</h2>
-					<p class="lead">Bridgeit provides strategic, founder-led AI and research-to-product advisory.</p>
-					<p>
-						We help founders, freelancers, and researchers turn complex ideas, research, and early demos into credible AI products
-						and industry-ready systems.
-					</p>
-					<p class="muted">Our focus is clarity, direction, and decision-making, not outsourced execution.</p>
-				</div>
+			  <div class="inner whatInner">
+			    <div class="whatGrid">
+			      <div class="whatLeft">
+			        <span class="sectionKicker">What we do</span>
+			        <h2 class="whatTitle">Strategic, founder-led AI and research-to-product advisory.</h2>
+			
+			        <p class="whatBody">
+			          We help founders, freelancers, and researchers turn complex ideas, research, and early demos into credible AI products
+			          and industry-ready systems.
+			        </p>
+			      </div>
+			
+			      <aside class="whatRight" aria-label="Focus">
+			        <div class="focusCard">
+			          <p class="focusTitle">Focus</p>
+			          <p class="focusText">
+			            Our focus is clarity, direction, and decision-making, not outsourced execution.
+			          </p>
+			        </div>
+			      </aside>
+			    </div>
+			  </div>
 			</section>
-
 			<!-- SLIDE 3 -->
 			<section class="slide s3" aria-label="How We Help">
 				<div class="inner">
@@ -281,12 +293,90 @@ import { SITE_TITLE } from '../consts';
 			.bullets li { margin: 10px 0; }
 			.bullets.compact li { margin: 8px 0; }
 
-			.s2 {
-				color: #0c1220;
-				background:
-					radial-gradient(1100px 700px at 18% 20%, rgba(255,214,160,0.35), transparent 55%),
-					linear-gradient(180deg, #f6f7fb 0%, #eef1f9 100%);
+			/* SLIDE 2 — upgraded layout */
+			.s2{
+			  color:#0c1220;
+			  position: relative;
+			  background:
+			    radial-gradient(1200px 700px at 15% 18%, rgba(255,214,160,0.45), transparent 58%),
+			    radial-gradient(900px 520px at 85% 30%, rgba(130,180,255,0.22), transparent 55%),
+			    linear-gradient(180deg, #f7f8fc 0%, #edf1fb 100%);
 			}
+			
+			/* subtle top “edge” so it feels like a deck panel */
+			.s2::before{
+			  content:"";
+			  position:absolute;
+			  left:0; right:0; top:0;
+			  height:1px;
+			  background: linear-gradient(90deg, transparent, rgba(12,18,32,0.10), transparent);
+			}
+			
+			/* Left alignment + controlled width */
+			.whatInner { max-width: 1500px; }
+			.whatGrid{
+			  display:grid;
+			  grid-template-columns: 1.25fr 0.75fr;
+			  gap: clamp(18px, 4vw, 56px);
+			  align-items: center;
+			}
+			
+			/* Typography hierarchy */
+			.sectionKicker{
+			  display:inline-flex;
+			  font-size: 12px;
+			  letter-spacing: 0.18em;
+			  text-transform: uppercase;
+			  opacity: 0.7;
+			  margin-bottom: 14px;
+			}
+			
+			.whatTitle{
+			  margin: 0 0 16px;
+			  font-size: clamp(34px, 4vw, 54px);
+			  line-height: 1.05;
+			  letter-spacing: -0.03em;
+			  max-width: 24ch;
+			}
+			
+			.whatBody{
+			  margin: 0;
+			  font-size: clamp(18px, 1.6vw, 22px);
+			  line-height: 1.55;
+			  max-width: 78ch;
+			  opacity: 0.92;
+			}
+			
+			/* Focus card */
+			.focusCard{
+			  border-radius: 22px;
+			  padding: 22px 22px;
+			  background: rgba(255,255,255,0.75);
+			  border: 1px solid rgba(12,18,32,0.10);
+			  box-shadow: 0 18px 44px rgba(12,18,32,0.08);
+			}
+			
+			.focusTitle{
+			  margin: 0 0 10px;
+			  font-size: 12px;
+			  letter-spacing: 0.18em;
+			  text-transform: uppercase;
+			  opacity: 0.7;
+			}
+			
+			.focusText{
+			  margin: 0;
+			  font-size: 18px;
+			  line-height: 1.55;
+			  color: rgba(12,18,32,0.92);
+			}
+			
+			/* Responsive */
+			@media (max-width: 980px){
+			  .whatGrid{ grid-template-columns: 1fr; }
+			  .whatTitle{ max-width: 100%; }
+			}
+
 			.s3 {
 				background:
 					radial-gradient(900px 520px at 20% 15%, rgba(255,214,160,0.14), transparent 60%),
