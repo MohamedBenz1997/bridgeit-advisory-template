@@ -17,23 +17,15 @@ import { SITE_TITLE } from '../consts';
 	<body>
 		<Header />
 
-		<!--
-			PowerPoint-style deck:
-			- MAIN is the scroll container
-			- Each slide is 100vh and snaps
-			- Slide 1 has the bridge photo only
-			- Slides 2+ use different clean backgrounds (no photo)
-			- Full-bleed horizontally (no “book page” look)
-		-->
 		<main class="deck">
 			<!-- SLIDE 1 (photo only here) -->
 			<section class="slide hero" aria-label="Bridgeit Advisory">
 				<div class="heroOverlay" aria-hidden="true"></div>
 
-				<div class="heroInner">
-					<div class="brand">
+				<div class="inner heroInner">
+					<div class="brandRow">
 						<span class="logo" aria-hidden="true" title="Bridgeit mark">
-							<!-- simple, consulting-style mark (bridge arch + base) -->
+							<!-- simple consulting-style mark: arch + base -->
 							<svg width="22" height="22" viewBox="0 0 24 24" fill="none">
 								<path d="M6 18V7" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
 								<path d="M18 18V7" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
@@ -56,26 +48,22 @@ import { SITE_TITLE } from '../consts';
 
 			<!-- SLIDE 2 -->
 			<section class="slide s2" id="what" aria-label="What We Do">
-				<div class="slideInner">
+				<div class="inner">
 					<h2>What We Do</h2>
-					<p class="lead">
-						Bridgeit provides strategic, founder-led AI and research-to-product advisory.
-					</p>
+					<p class="lead">Bridgeit provides strategic, founder-led AI and research-to-product advisory.</p>
 					<p>
-						We help founders, freelancers, and researchers turn complex ideas, research, and early demos into
-						credible AI products and industry-ready systems.
+						We help founders, freelancers, and researchers turn complex ideas, research, and early demos into credible AI products
+						and industry-ready systems.
 					</p>
-					<p class="muted">
-						Our focus is clarity, direction, and decision-making, not outsourced execution.
-					</p>
+					<p class="muted">Our focus is clarity, direction, and decision-making, not outsourced execution.</p>
 				</div>
 			</section>
 
 			<!-- SLIDE 3 -->
 			<section class="slide s3" aria-label="How We Help">
-				<div class="slideInner">
+				<div class="inner">
 					<h2>How We Help</h2>
-					<p>We work with clients on:</p>
+					<p class="lead">We work with clients on:</p>
 					<ul class="bullets">
 						<li>Translating research or ideas into concrete product directions</li>
 						<li>Applied AI architecture and system-level decisions</li>
@@ -83,33 +71,31 @@ import { SITE_TITLE } from '../consts';
 						<li>Reviewing demos, experiments, and early prototypes</li>
 						<li>Identifying technical, data, and evaluation risks early</li>
 					</ul>
-					<p class="muted">
-						The goal is to avoid building the wrong thing and move faster with confidence.
-					</p>
+					<p class="muted">The goal is to avoid building the wrong thing and move faster with confidence.</p>
 				</div>
 			</section>
 
 			<!-- SLIDE 4 -->
 			<section class="slide s4" aria-label="How We Work">
-				<div class="slideInner">
+				<div class="inner">
 					<h2>How We Work</h2>
-					<p>
+					<p class="lead">
 						We start with an exploratory conversation to understand context, goals, and constraints.
+					</p>
+					<p>
 						For teams that find value, we continue through hourly strategic advisory, delivered via:
 					</p>
 					<ul class="bullets">
 						<li>live discussions</li>
 						<li>async review of documents, designs, experiments, or prototypes</li>
 					</ul>
-					<p class="muted">
-						Work is founder-led and intentionally limited to ensure depth and quality.
-					</p>
+					<p class="muted">Work is founder-led and intentionally limited to ensure depth and quality.</p>
 				</div>
 			</section>
 
 			<!-- SLIDE 5 -->
 			<section class="slide s5" aria-label="Who We Work With">
-				<div class="slideInner">
+				<div class="inner">
 					<h2>Who We Work With</h2>
 
 					<div class="twoCol">
@@ -137,17 +123,14 @@ import { SITE_TITLE } from '../consts';
 
 			<!-- SLIDE 6 -->
 			<section class="slide s6" id="contact" aria-label="Contact">
-				<div class="slideInner">
+				<div class="inner">
 					<h2>Contact</h2>
 					<p class="lead">Exploratory conversations are available by referral or direct outreach.</p>
 
-					<div class="contactTop">
-						<p class="emailLine">
-							📧 <a href="mailto:contact@bridgeitadvisory.com">contact@bridgeitadvisory.com</a>
-						</p>
-					</div>
+					<p class="emailLine">
+						📧 <a href="mailto:contact@bridgeitadvisory.com">contact@bridgeitadvisory.com</a>
+					</p>
 
-					<!-- Enhanced form UI (keep your content; endpoint is the only thing you replace) -->
 					<form class="form" method="POST" action="https://formspree.io/f/REPLACE_ME">
 						<div class="row">
 							<label>
@@ -177,25 +160,25 @@ import { SITE_TITLE } from '../consts';
 		<Footer />
 
 		<style>
-			/* ===== Make MAIN the scroll container (ppt feel) ===== */
+			:global(html) { scroll-behavior: smooth; }
 			:global(body) {
 				margin: 0;
-				overflow: hidden; /* prevents page scroll, only the deck scrolls */
+				overflow: hidden; /* Only the deck scrolls */
 				background: #0b0f17;
 				color: #eaf0ff;
 			}
-			:global(html) { scroll-behavior: smooth; }
-			:global(*) { box-sizing: border-box; }
 
+			/* Deck scroll container */
 			.deck {
 				height: 100vh;
+				width: 100vw;
 				overflow-y: auto;
 				scroll-snap-type: y mandatory;
 				scroll-snap-stop: always;
 				-webkit-overflow-scrolling: touch;
 			}
 
-			/* ===== Slides are FULL-BLEED horizontally ===== */
+			/* Full-screen slides, full-bleed horizontally */
 			.slide {
 				min-height: 100vh;
 				width: 100vw;
@@ -203,18 +186,17 @@ import { SITE_TITLE } from '../consts';
 				position: relative;
 				display: grid;
 				align-items: center;
-				padding: clamp(28px, 5vw, 80px);
+				padding: clamp(28px, 5vw, 86px);
 			}
 
-			/* Inner content is full-width-ish (not book-like) but still readable */
-			.slideInner,
-			.heroInner {
+			/* Wider inner content to kill “book page” feeling */
+			.inner {
 				width: 100%;
-				max-width: 1200px; /* bigger than before */
+				max-width: 1280px;
 				margin: 0 auto;
 			}
 
-			/* ===== Slide 1: bridge photo ONLY here ===== */
+			/* HERO slide */
 			.hero {
 				background-image: url('/hero-bridge.jpg');
 				background-size: cover;
@@ -224,17 +206,15 @@ import { SITE_TITLE } from '../consts';
 			.heroOverlay {
 				position: absolute;
 				inset: 0;
-				/* Brighter, higher-contrast overlay so text reads on dark photo */
 				background:
-					linear-gradient(90deg, rgba(6, 10, 18, 0.35) 0%, rgba(6, 10, 18, 0.55) 35%, rgba(6, 10, 18, 0.78) 70%, rgba(6, 10, 18, 0.88) 100%),
-					radial-gradient(900px 520px at 18% 25%, rgba(255, 214, 160, 0.28), transparent 60%),
-					linear-gradient(180deg, rgba(6, 10, 18, 0.25) 0%, rgba(6, 10, 18, 0.60) 70%, rgba(6, 10, 18, 0.78) 100%);
+					linear-gradient(90deg, rgba(6,10,18,0.55) 0%, rgba(6,10,18,0.68) 38%, rgba(6,10,18,0.82) 70%, rgba(6,10,18,0.90) 100%),
+					radial-gradient(900px 520px at 18% 25%, rgba(255,214,160,0.30), transparent 60%),
+					linear-gradient(180deg, rgba(6,10,18,0.25) 0%, rgba(6,10,18,0.65) 70%, rgba(6,10,18,0.80) 100%);
 				pointer-events: none;
 			}
 			.heroInner { position: relative; }
 
-			/* Brand / logo */
-			.brand {
+			.brandRow {
 				display: inline-flex;
 				align-items: center;
 				gap: 12px;
@@ -242,12 +222,12 @@ import { SITE_TITLE } from '../consts';
 			}
 			.logo {
 				display: inline-flex;
-				width: 44px;
-				height: 44px;
+				width: 46px;
+				height: 46px;
 				align-items: center;
 				justify-content: center;
 				border-radius: 14px;
-				background: rgba(255, 255, 255, 0.10);
+				background: rgba(255, 255, 255, 0.12);
 				border: 1px solid rgba(255, 255, 255, 0.22);
 				backdrop-filter: blur(10px);
 				-webkit-backdrop-filter: blur(10px);
@@ -256,12 +236,12 @@ import { SITE_TITLE } from '../consts';
 				font-size: 13px;
 				letter-spacing: 0.14em;
 				text-transform: uppercase;
-				opacity: 0.90;
+				opacity: 0.95;
 			}
 
-			/* Type */
+			/* Typography */
 			h1 {
-				font-size: clamp(44px, 6vw, 84px);
+				font-size: clamp(46px, 6vw, 84px);
 				line-height: 1.02;
 				letter-spacing: -0.035em;
 				margin: 0 0 14px;
@@ -271,13 +251,13 @@ import { SITE_TITLE } from '../consts';
 			.tagline {
 				font-size: clamp(18px, 2.2vw, 26px);
 				margin: 0 0 22px;
-				opacity: 0.96;
-				max-width: 60ch;
+				opacity: 0.98;
+				max-width: 62ch;
 				text-shadow: 0 10px 28px rgba(0,0,0,0.35);
 			}
 
 			h2 {
-				font-size: clamp(24px, 3vw, 34px);
+				font-size: clamp(26px, 3vw, 38px);
 				letter-spacing: -0.02em;
 				margin: 0 0 14px;
 			}
@@ -288,9 +268,10 @@ import { SITE_TITLE } from '../consts';
 				margin: 0 0 12px;
 				opacity: 0.78;
 			}
+
 			p { margin: 0 0 14px; }
-			.lead { font-size: 18px; opacity: 0.92; max-width: 78ch; }
-			.muted { opacity: 0.78; max-width: 86ch; }
+			.lead { font-size: 18px; opacity: 0.92; max-width: 90ch; }
+			.muted { opacity: 0.78; max-width: 92ch; }
 			a { color: inherit; text-underline-offset: 4px; }
 
 			/* Buttons */
@@ -317,7 +298,6 @@ import { SITE_TITLE } from '../consts';
 			.btn:hover { transform: translateY(-1px); background: rgba(255,255,255,0.12); }
 			.btn:active { transform: translateY(0px); }
 
-			/* Warm accent for primary button (works with bridge sunset tones) */
 			.primary {
 				background: rgba(255, 214, 160, 0.18);
 				border-color: rgba(255, 214, 160, 0.42);
@@ -329,38 +309,27 @@ import { SITE_TITLE } from '../consts';
 			.ghost { background: rgba(255,255,255,0.06); }
 
 			/* Lists */
-			.bullets { margin: 10px 0 14px; padding-left: 18px; max-width: 86ch; }
+			.bullets { margin: 10px 0 14px; padding-left: 18px; max-width: 92ch; }
 			.bullets li { margin: 10px 0; }
 			.bullets.compact li { margin: 8px 0; }
 
-			/* ===== Unique slide backgrounds (no photo after slide 1) ===== */
-			/* 2: clean light-ish gradient */
+			/* Slide backgrounds (NO PHOTO after slide 1) */
 			.s2 {
 				color: #0c1220;
 				background:
 					radial-gradient(1100px 700px at 18% 20%, rgba(255,214,160,0.35), transparent 55%),
 					linear-gradient(180deg, #f6f7fb 0%, #eef1f9 100%);
 			}
-			.s2 a, .s2 .btn { color: #0c1220; }
-			.s2 .btn { border-color: rgba(12,18,32,0.14); background: rgba(12,18,32,0.04); }
-			.s2 .btn:hover { background: rgba(12,18,32,0.06); }
-			.s2 .primary { background: rgba(12,18,32,0.92); border-color: rgba(12,18,32,0.92); color: #fff; }
-			.s2 .primary:hover { background: rgba(12,18,32,0.86); }
-
-			/* 3: deep navy */
 			.s3 {
 				background:
 					radial-gradient(900px 520px at 20% 15%, rgba(255,214,160,0.14), transparent 60%),
 					linear-gradient(180deg, #0b1020 0%, #070a14 100%);
 			}
-
-			/* 4: charcoal + subtle grid feel */
 			.s4 {
 				background:
 					radial-gradient(900px 520px at 20% 10%, rgba(255,214,160,0.10), transparent 60%),
 					linear-gradient(180deg, #0a0d12 0%, #06070b 100%);
 			}
-			/* tiny pattern */
 			.s4::after {
 				content: "";
 				position: absolute;
@@ -369,18 +338,14 @@ import { SITE_TITLE } from '../consts';
 					linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
 					linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
 				background-size: 44px 44px;
-				opacity: 0.20;
+				opacity: 0.18;
 				pointer-events: none;
 			}
-
-			/* 5: muted “warm” slate */
 			.s5 {
 				background:
 					radial-gradient(1000px 620px at 18% 18%, rgba(255,214,160,0.16), transparent 55%),
 					linear-gradient(180deg, #0f141b 0%, #0a0d12 100%);
 			}
-
-			/* 6: slightly brighter, focused for form */
 			.s6 {
 				background:
 					radial-gradient(1100px 700px at 18% 20%, rgba(255,214,160,0.18), transparent 55%),
@@ -402,19 +367,18 @@ import { SITE_TITLE } from '../consts';
 				backdrop-filter: blur(10px);
 				-webkit-backdrop-filter: blur(10px);
 			}
-			/* Cards on light slide (s2) */
 			.s2 .card {
 				border-color: rgba(12,18,32,0.12);
-				background: rgba(255,255,255,0.65);
+				background: rgba(255,255,255,0.70);
 			}
+			.s2 h2, .s2 h3, .s2 p, .s2 li, .s2 a { color: #0c1220; }
 
 			/* Contact form */
-			.contactTop { margin-top: 4px; }
 			.emailLine { margin: 8px 0 16px; }
 
 			.form {
 				margin-top: 18px;
-				max-width: 1000px; /* wider (no “book” feel) */
+				max-width: 1000px;
 				padding-top: 16px;
 				border-top: 1px solid rgba(255,255,255,0.12);
 			}
@@ -435,17 +399,11 @@ import { SITE_TITLE } from '../consts';
 				color: #eaf0ff;
 				outline: none;
 			}
-			.s2 input, .s2 textarea {
-				background: rgba(12,18,32,0.04);
-				border-color: rgba(12,18,32,0.14);
-				color: #0c1220;
-			}
 			input:focus, textarea:focus {
 				border-color: rgba(255, 214, 160, 0.55);
 				box-shadow: 0 0 0 4px rgba(255, 214, 160, 0.18);
 			}
 
-			/* Responsive */
 			@media (max-width: 980px) {
 				.twoCol { grid-template-columns: 1fr; }
 				.row { grid-template-columns: 1fr; }
