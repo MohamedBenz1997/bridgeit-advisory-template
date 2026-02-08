@@ -20,38 +20,48 @@ const nav = [
   .wrap {
     position: sticky;
     top: 0;
-    z-index: 10;
-    background: rgba(255, 255, 255, 0.9);
+    z-index: 50;
+
+    /* Deck-friendly: transparent dark glass */
+    background: rgba(10, 12, 16, 0.35);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(0,0,0,0.06);
+    -webkit-backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid rgba(255,255,255,0.10);
   }
+
   .bar {
-    max-width: 980px;
+    width: 100%;
     margin: 0 auto;
-    padding: 14px 20px;
+    padding: 14px 22px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
+
   .brand {
     font-weight: 700;
     letter-spacing: -0.01em;
     text-decoration: none;
-    color: inherit;
+    color: rgba(255,255,255,0.92);
   }
+
   .nav {
     display: flex;
     gap: 14px;
     align-items: center;
   }
+
   .link {
     text-decoration: none;
-    color: inherit;
-    opacity: 0.8;
+    color: rgba(255,255,255,0.85);
+    opacity: 0.95;
     font-size: 14px;
   }
+
   .link:hover {
-    opacity: 1;
+    color: rgba(255,255,255,1);
     text-decoration: underline;
     text-underline-offset: 4px;
   }
