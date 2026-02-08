@@ -2,49 +2,118 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { SITE_TITLE } from '../consts';
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<BaseHead
+			title={`Bridgeit Advisory | ${SITE_TITLE}`}
+			description="Bridging research and ideas into real AI products."
+		/>
 	</head>
+
 	<body>
 		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+
+		<main class="container">
+			<section class="hero">
+				<h1>Bridgeit Advisory</h1>
+				<p class="tagline">Bridging research and ideas into real AI products</p>
+			</section>
+
+			<section>
+				<h2>What We Do</h2>
+				<p>
+					Bridgeit provides strategic, founder-led AI and research-to-product advisory. We help founders,
+					freelancers, and researchers turn complex ideas, research, and early demos into credible AI products
+					and industry-ready systems.
+				</p>
+				<p class="muted">
+					Our focus is clarity, direction, and decision-making — not outsourced execution.
+				</p>
+			</section>
+
+			<section>
+				<h2>How We Help</h2>
+				<p>We work with clients on:</p>
+				<ul>
+					<li>Translating research or ideas into concrete product directions</li>
+					<li>Applied AI architecture and system-level decisions</li>
+					<li>MVP scoping: what to build, validate, or discard</li>
+					<li>Reviewing demos, experiments, and early prototypes</li>
+					<li>Identifying technical, data, and evaluation risks early</li>
+				</ul>
+				<p class="muted">
+					The goal is to avoid building the wrong thing and move faster with confidence.
+				</p>
+			</section>
+
+			<section>
+				<h2>How We Work</h2>
+				<p>
+					We start with an exploratory conversation to understand context, goals, and constraints. For teams
+					that find value, we continue through hourly strategic advisory, delivered via:
+				</p>
+				<ul>
+					<li>live discussions</li>
+					<li>async review of documents, designs, experiments, or prototypes</li>
+				</ul>
+				<p class="muted">
+					Work is founder-led and intentionally limited to ensure depth and quality.
+				</p>
+			</section>
+
+			<section>
+				<h2>Who We Work With</h2>
+
+				<h3>We work with</h3>
+				<ul>
+					<li>Startup founders building AI-driven products</li>
+					<li>Freelancers and independent builders</li>
+					<li>PhDs, postdocs, and MScs transitioning to industry</li>
+					<li>Research-driven teams validating applied directions</li>
+				</ul>
+
+				<h3>We do not work with</h3>
+				<ul>
+					<li>Large enterprises</li>
+					<li>Outsourced implementation projects</li>
+					<li>Teams looking for full development or delivery</li>
+				</ul>
+			</section>
+
+			<section class="cta" id="contact">
+				<h2>Contact</h2>
+				<p class="muted">
+					Exploratory conversations are available by referral or direct outreach.
+				</p>
+				<p>
+					📧 <a href="mailto:contact@bridgeitadvisory.com">contact@bridgeitadvisory.com</a><br />
+					🌐 <a href="https://bridgeitadvisory.com">bridgeitadvisory.com</a>
+				</p>
+			</section>
 		</main>
+
 		<Footer />
+
+		<style>
+			.container { max-width: 860px; margin: 0 auto; padding: 56px 20px; }
+			.hero { padding: 18px 0 26px; }
+			h1 { font-size: 46px; letter-spacing: -0.02em; margin: 0 0 10px; }
+			.tagline { font-size: 18px; margin: 0; opacity: 0.9; }
+
+			section { padding: 22px 0; border-top: 1px solid rgba(0,0,0,0.08); }
+			h2 { font-size: 18px; margin: 0 0 10px; }
+			h3 { font-size: 14px; margin: 18px 0 8px; text-transform: uppercase; letter-spacing: 0.08em; opacity: 0.7; }
+
+			p { margin: 0 0 12px; }
+			ul { margin: 0 0 12px; padding-left: 18px; }
+			li { margin: 6px 0; }
+
+			.muted { opacity: 0.85; max-width: 78ch; }
+			.cta a { text-decoration: underline; }
+		</style>
 	</body>
 </html>
