@@ -309,106 +309,91 @@ import { SITE_TITLE } from '../consts';
 			.bullets.compact li { margin: 8px 0; }
 
 			/* ===== Slide 2 layout upgrades ===== */
-			.s2Inner { display: grid; align-items: start; }
-			
-			/* Pull content up a bit (reduce “empty top” feeling) */
-			.s2Layout {
-			  display: grid;
-			  grid-template-columns: 1.25fr 1px 0.9fr;
-			  gap: 32px;
-			  align-items: start;
-			  margin-top: clamp(10px, 2vh, 28px);
+			.s2 {
+			  background:
+			    radial-gradient(1100px 700px at 18% 20%, rgba(255,214,160,0.35), transparent 55%),
+			    linear-gradient(180deg, #f6f7fb 0%, #eef1f9 100%) !important;
+			  color: #0c1220 !important;
 			}
 			
-			.s2Left { max-width: 78ch; }
+			/* Ensure ALL text is readable */
+			.s2 *,
+			.s2 h2,
+			.s2 p,
+			.s2 li {
+			  color: #0c1220 !important;
+			}
 			
+			/* Section label */
+			.s2 .kicker,
 			.s2Kicker {
-			  margin: 0 0 12px;
 			  font-size: 12px;
-			  letter-spacing: 0.18em;
+			  letter-spacing: 0.16em;
 			  text-transform: uppercase;
-			  opacity: 0.72;
+			  opacity: 0.7;
+			  margin-bottom: 14px;
 			}
 			
-			.s2Headline {
-			  margin: 0 0 14px;
-			  font-size: clamp(44px, 4.4vw, 64px);
-			  line-height: 1.04;
+			/* Big headline */
+			.s2 h2 {
+			  font-size: clamp(44px, 5vw, 64px);
+			  line-height: 1.05;
 			  letter-spacing: -0.03em;
-			  max-width: 22ch; /* forces cleaner breaks */
+			  margin-bottom: 18px;
 			}
 			
-			.nowrap { white-space: nowrap; }
-			
-			.s2Body {
-			  margin: 0;
-			  font-size: 18px;
-			  line-height: 1.6;
-			  opacity: 0.92;
-			  max-width: 74ch;
+			/* Main description text */
+			.s2 .lead {
+			  font-size: 20px;
+			  max-width: 80ch;
+			  opacity: 0.95;
 			}
 			
-			/* subtle relationship cue */
-			.s2Divider {
-			  width: 1px;
-			  align-self: stretch;
-			  background: linear-gradient(
-			    to bottom,
-			    rgba(12,18,32,0.00),
-			    rgba(12,18,32,0.14),
-			    rgba(12,18,32,0.00)
-			  );
+			/* Body copy */
+			.s2 p {
+			  max-width: 82ch;
 			  opacity: 0.9;
 			}
 			
+			/* Focus card on the right */
 			.s2FocusCard {
-			  border-radius: 18px;
-			  padding: 22px 22px;
-			  background: rgba(255,255,255,0.78);
+			  background: rgba(255,255,255,0.92);
 			  border: 1px solid rgba(12,18,32,0.10);
-			  box-shadow: 0 10px 30px rgba(12,18,32,0.08);
-			  max-width: 560px;
+			  border-radius: 18px;
+			  padding: 22px 26px;
+			  box-shadow: 0 16px 40px rgba(12,18,32,0.12);
 			}
 			
-			.s2FocusLabel {
-			  margin: 0 0 10px;
+			/* Focus label inside card */
+			.s2FocusCard h3 {
 			  font-size: 12px;
-			  letter-spacing: 0.18em;
+			  letter-spacing: 0.14em;
 			  text-transform: uppercase;
-			  opacity: 0.7;
+			  opacity: 0.6;
+			  margin-bottom: 8px;
 			}
 			
-			.s2FocusText {
-			  margin: 0;
-			  font-size: 18px;
-			  line-height: 1.6;
-			  opacity: 0.92;
-			}
-			
-			/* chips = make slide feel designed */
-			.s2Chips {
-			  display: flex;
-			  flex-wrap: wrap;
-			  gap: 10px;
-			  margin-top: 18px;
-			}
-			
+			/* Chips / tags */
 			.s2Chip {
 			  display: inline-flex;
-			  align-items: center;
-			  padding: 9px 12px;
+			  padding: 8px 14px;
 			  border-radius: 999px;
-			  font-size: 13px;
-			  border: 1px solid rgba(12,18,32,0.10);
-			  background: rgba(255,255,255,0.55);
+			  border: 1px solid rgba(12,18,32,0.14);
+			  background: rgba(255,255,255,0.75);
 			  color: #0c1220;
+			  font-size: 13px;
+			  opacity: 0.95;
 			}
 			
-			/* responsive */
-			@media (max-width: 980px) {
-			  .s2Layout { grid-template-columns: 1fr; gap: 18px; }
-			  .s2Divider { display: none; }
-			  .s2FocusCard { max-width: 100%; }
+			/* Optional subtle divider */
+			.s2Divider {
+			  width: 1px;
+			  background: linear-gradient(
+			    to bottom,
+			    rgba(12,18,32,0.00),
+			    rgba(12,18,32,0.18),
+			    rgba(12,18,32,0.00)
+			  );
 			}
 
 			.s3 {
