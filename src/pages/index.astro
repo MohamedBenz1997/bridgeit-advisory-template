@@ -10,7 +10,7 @@ import { SITE_TITLE } from '../consts';
 	<head>
 		<BaseHead
 			title={`Bridgeit Advisory | ${SITE_TITLE}`}
-			description="Bridging research and ideas into real AI products"
+			description="Bridging research and ideas into real AI products."
 		/>
 	</head>
 
@@ -18,28 +18,26 @@ import { SITE_TITLE } from '../consts';
 		<Header />
 
 		<!--
-			PowerPoint-style scrolling:
-			- We make MAIN the scroll container (not the whole page)
-			- Each section is a full-screen "slide"
+			PowerPoint-style deck:
+			- MAIN is the scroll container
+			- Each slide is 100vh and snaps
+			- Slide 1 has the bridge photo only
+			- Slides 2+ use different clean backgrounds (no photo)
+			- Full-bleed horizontally (no “book page” look)
 		-->
-		<main class="deck" aria-label="Bridgeit Advisory">
-			<!-- SLIDE 1 -->
+		<main class="deck">
+			<!-- SLIDE 1 (photo only here) -->
 			<section class="slide hero" aria-label="Bridgeit Advisory">
-				<div class="bgOverlay" aria-hidden="true"></div>
+				<div class="heroOverlay" aria-hidden="true"></div>
 
-				<div class="frame">
+				<div class="heroInner">
 					<div class="brand">
-						<span class="logo" aria-hidden="true">
-							<!-- simple, consulting-style mark: arch + pillar -->
+						<span class="logo" aria-hidden="true" title="Bridgeit mark">
+							<!-- simple, consulting-style mark (bridge arch + base) -->
 							<svg width="22" height="22" viewBox="0 0 24 24" fill="none">
 								<path d="M6 18V7" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
 								<path d="M18 18V7" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-								<path
-									d="M7 13c2.7-3.6 6.3-3.6 10 0"
-									stroke="currentColor"
-									stroke-width="2"
-									stroke-linecap="round"
-								/>
+								<path d="M7 13c2.7-3.6 6.3-3.6 10 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
 								<path d="M6 18h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
 							</svg>
 						</span>
@@ -49,7 +47,7 @@ import { SITE_TITLE } from '../consts';
 					<h1>Bridgeit Advisory</h1>
 					<p class="tagline">Bridging research and ideas into real AI products</p>
 
-					<div class="heroActions">
+					<div class="actions">
 						<a class="btn primary" href="#contact">Contact</a>
 						<a class="btn ghost" href="#what">What We Do</a>
 					</div>
@@ -57,129 +55,121 @@ import { SITE_TITLE } from '../consts';
 			</section>
 
 			<!-- SLIDE 2 -->
-			<section class="slide" id="what" aria-label="What We Do">
-				<div class="frame">
-					<div class="panel">
-						<h2>What We Do</h2>
-						<p class="lead">
-							Bridgeit provides strategic, founder-led AI and research-to-product advisory.
-						</p>
-						<p>
-							We help founders, freelancers, and researchers turn complex ideas, research, and early demos
-							into credible AI products and industry-ready systems.
-						</p>
-						<p class="muted">
-							Our focus is clarity, direction, and decision-making, not outsourced execution.
-						</p>
-					</div>
+			<section class="slide s2" id="what" aria-label="What We Do">
+				<div class="slideInner">
+					<h2>What We Do</h2>
+					<p class="lead">
+						Bridgeit provides strategic, founder-led AI and research-to-product advisory.
+					</p>
+					<p>
+						We help founders, freelancers, and researchers turn complex ideas, research, and early demos into
+						credible AI products and industry-ready systems.
+					</p>
+					<p class="muted">
+						Our focus is clarity, direction, and decision-making, not outsourced execution.
+					</p>
 				</div>
 			</section>
 
 			<!-- SLIDE 3 -->
-			<section class="slide" aria-label="How We Help">
-				<div class="frame">
-					<div class="panel">
-						<h2>How We Help</h2>
-						<p>We work with clients on:</p>
-						<ul class="bullets">
-							<li>Translating research or ideas into concrete product directions</li>
-							<li>Applied AI architecture and system-level decisions</li>
-							<li>MVP scoping: what to build, validate, or discard</li>
-							<li>Reviewing demos, experiments, and early prototypes</li>
-							<li>Identifying technical, data, and evaluation risks early</li>
-						</ul>
-						<p class="muted">
-							The goal is to avoid building the wrong thing and move faster with confidence.
-						</p>
-					</div>
+			<section class="slide s3" aria-label="How We Help">
+				<div class="slideInner">
+					<h2>How We Help</h2>
+					<p>We work with clients on:</p>
+					<ul class="bullets">
+						<li>Translating research or ideas into concrete product directions</li>
+						<li>Applied AI architecture and system-level decisions</li>
+						<li>MVP scoping: what to build, validate, or discard</li>
+						<li>Reviewing demos, experiments, and early prototypes</li>
+						<li>Identifying technical, data, and evaluation risks early</li>
+					</ul>
+					<p class="muted">
+						The goal is to avoid building the wrong thing and move faster with confidence.
+					</p>
 				</div>
 			</section>
 
 			<!-- SLIDE 4 -->
-			<section class="slide" aria-label="How We Work">
-				<div class="frame">
-					<div class="panel">
-						<h2>How We Work</h2>
-						<p>
-							We start with an exploratory conversation to understand context, goals, and constraints.
-							For teams that find value, we continue through hourly strategic advisory, delivered via:
-						</p>
-						<ul class="bullets">
-							<li>live discussions</li>
-							<li>async review of documents, designs, experiments, or prototypes</li>
-						</ul>
-						<p class="muted">
-							Work is founder-led and intentionally limited to ensure depth and quality.
-						</p>
-					</div>
+			<section class="slide s4" aria-label="How We Work">
+				<div class="slideInner">
+					<h2>How We Work</h2>
+					<p>
+						We start with an exploratory conversation to understand context, goals, and constraints.
+						For teams that find value, we continue through hourly strategic advisory, delivered via:
+					</p>
+					<ul class="bullets">
+						<li>live discussions</li>
+						<li>async review of documents, designs, experiments, or prototypes</li>
+					</ul>
+					<p class="muted">
+						Work is founder-led and intentionally limited to ensure depth and quality.
+					</p>
 				</div>
 			</section>
 
 			<!-- SLIDE 5 -->
-			<section class="slide" aria-label="Who We Work With">
-				<div class="frame">
-					<div class="panel">
-						<h2>Who We Work With</h2>
+			<section class="slide s5" aria-label="Who We Work With">
+				<div class="slideInner">
+					<h2>Who We Work With</h2>
 
-						<div class="twoCol">
-							<div class="card">
-								<h3>We work with</h3>
-								<ul class="bullets">
-									<li>Startup founders building AI-driven products</li>
-									<li>Freelancers and independent builders</li>
-									<li>PhDs, postdocs, and MScs transitioning to industry</li>
-									<li>Research-driven teams validating applied directions</li>
-								</ul>
-							</div>
+					<div class="twoCol">
+						<div class="card">
+							<h3>We work with</h3>
+							<ul class="bullets compact">
+								<li>Startup founders building AI-driven products</li>
+								<li>Freelancers and independent builders</li>
+								<li>PhDs, postdocs, and MScs transitioning to industry</li>
+								<li>Research-driven teams validating applied directions</li>
+							</ul>
+						</div>
 
-							<div class="card">
-								<h3>We do not work with</h3>
-								<ul class="bullets">
-									<li>Large enterprises</li>
-									<li>Outsourced implementation projects</li>
-									<li>Teams looking for full development or delivery</li>
-								</ul>
-							</div>
+						<div class="card">
+							<h3>We do not work with</h3>
+							<ul class="bullets compact">
+								<li>Large enterprises</li>
+								<li>Outsourced implementation projects</li>
+								<li>Teams looking for full development or delivery</li>
+							</ul>
 						</div>
 					</div>
 				</div>
 			</section>
 
 			<!-- SLIDE 6 -->
-			<section class="slide" id="contact" aria-label="Contact">
-				<div class="frame">
-					<div class="panel">
-						<h2>Contact</h2>
-						<p class="lead">Exploratory conversations are available by referral or direct outreach.</p>
-						<p class="emailLine">📧 <a href="mailto:contact@bridgeitadvisory.com">contact@bridgeitadvisory.com</a></p>
+			<section class="slide s6" id="contact" aria-label="Contact">
+				<div class="slideInner">
+					<h2>Contact</h2>
+					<p class="lead">Exploratory conversations are available by referral or direct outreach.</p>
 
-						<!-- Contact form (clean + professional).
-							Recommended: Formspree / Basin / Getform.
-							Replace the action URL with your endpoint.
-						-->
-						<form class="form" method="POST" action="https://formspree.io/f/REPLACE_ME">
-							<div class="row">
-								<label>
-									Name
-									<input name="name" type="text" autocomplete="name" required />
-								</label>
-								<label>
-									Email
-									<input name="email" type="email" autocomplete="email" required />
-								</label>
-							</div>
-
-							<label>
-								Message
-								<textarea name="message" rows="6" required></textarea>
-							</label>
-
-							<div class="formActions">
-								<button class="btn primary" type="submit">Send</button>
-								<a class="btn ghost" href="mailto:contact@bridgeitadvisory.com">Email instead</a>
-							</div>
-						</form>
+					<div class="contactTop">
+						<p class="emailLine">
+							📧 <a href="mailto:contact@bridgeitadvisory.com">contact@bridgeitadvisory.com</a>
+						</p>
 					</div>
+
+					<!-- Enhanced form UI (keep your content; endpoint is the only thing you replace) -->
+					<form class="form" method="POST" action="https://formspree.io/f/REPLACE_ME">
+						<div class="row">
+							<label>
+								Name
+								<input name="name" type="text" autocomplete="name" required />
+							</label>
+							<label>
+								Email
+								<input name="email" type="email" autocomplete="email" required />
+							</label>
+						</div>
+
+						<label>
+							Message
+							<textarea name="message" rows="7" required></textarea>
+						</label>
+
+						<div class="actions">
+							<button class="btn primary" type="submit">Send</button>
+							<a class="btn ghost" href="mailto:contact@bridgeitadvisory.com">Email instead</a>
+						</div>
+					</form>
 				</div>
 			</section>
 		</main>
@@ -187,85 +177,61 @@ import { SITE_TITLE } from '../consts';
 		<Footer />
 
 		<style>
-			/* ===== Background image + palette tuned for your bridge photo ===== */
+			/* ===== Make MAIN the scroll container (ppt feel) ===== */
 			:global(body) {
 				margin: 0;
-				color: #eef3ff;
-				background: #05070b;
-				/* Use your attached image as fixed site background */
-				background-image: url('/hero-bridge.jpg');
-				background-size: cover;
-				background-position: center;
-				background-attachment: fixed;
-				overflow: hidden; /* important: make MAIN the scroll container */
+				overflow: hidden; /* prevents page scroll, only the deck scrolls */
+				background: #0b0f17;
+				color: #eaf0ff;
 			}
-
-			/* Global typography smoothing */
-			:global(*) { box-sizing: border-box; }
 			:global(html) { scroll-behavior: smooth; }
+			:global(*) { box-sizing: border-box; }
 
-			/* ===== PPT-style scrolling container ===== */
 			.deck {
-				height: calc(100vh - 0px);
+				height: 100vh;
 				overflow-y: auto;
 				scroll-snap-type: y mandatory;
-				scroll-padding-top: 16px;
+				scroll-snap-stop: always;
 				-webkit-overflow-scrolling: touch;
 			}
 
-			/* hide scrollbar without breaking scroll */
-			.deck::-webkit-scrollbar { width: 10px; }
-			.deck::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.08); border-radius: 999px; }
-			.deck::-webkit-scrollbar-track { background: transparent; }
-
+			/* ===== Slides are FULL-BLEED horizontally ===== */
 			.slide {
 				min-height: 100vh;
+				width: 100vw;
 				scroll-snap-align: start;
-				scroll-snap-stop: always; /* makes snapping feel stronger */
+				position: relative;
 				display: grid;
 				align-items: center;
-				padding: 72px 5vw;
-				position: relative;
+				padding: clamp(28px, 5vw, 80px);
 			}
 
-			/* “slide overlay” so text is always readable on your warm/city photo */
-			.slide::before {
-				content: "";
-				position: absolute;
-				inset: 0;
-				background:
-					radial-gradient(1200px 700px at 15% 20%, rgba(13, 18, 30, 0.65), rgba(5,7,11,0.88) 60%),
-					linear-gradient(180deg, rgba(5,7,11,0.60) 0%, rgba(5,7,11,0.82) 60%, rgba(5,7,11,0.92) 100%);
-				pointer-events: none;
-			}
-
-			/* Content should feel “slide-like”, not a narrow book page */
-			.frame {
-				position: relative;
-				width: min(1180px, 100%);
+			/* Inner content is full-width-ish (not book-like) but still readable */
+			.slideInner,
+			.heroInner {
+				width: 100%;
+				max-width: 1200px; /* bigger than before */
 				margin: 0 auto;
 			}
 
-			/* Panel look (clean, premium, subtle) */
-			.panel {
-				background: rgba(6, 8, 12, 0.45);
-				border: 1px solid rgba(255, 255, 255, 0.10);
-				border-radius: 22px;
-				padding: clamp(22px, 3vw, 36px);
-				backdrop-filter: blur(10px);
-				-webkit-backdrop-filter: blur(10px);
-				box-shadow: 0 18px 60px rgba(0, 0, 0, 0.35);
+			/* ===== Slide 1: bridge photo ONLY here ===== */
+			.hero {
+				background-image: url('/hero-bridge.jpg');
+				background-size: cover;
+				background-position: center;
+				color: #f6f8ff;
 			}
-
-			/* HERO overrides */
-			.hero::before {
-				/* slightly lighter on the hero so image shows through more */
+			.heroOverlay {
+				position: absolute;
+				inset: 0;
+				/* Brighter, higher-contrast overlay so text reads on dark photo */
 				background:
-					linear-gradient(90deg, rgba(5,7,11,0.88) 0%, rgba(5,7,11,0.70) 48%, rgba(5,7,11,0.45) 100%),
-					radial-gradient(1000px 700px at 15% 25%, rgba(214, 147, 78, 0.18), transparent 60%);
+					linear-gradient(90deg, rgba(6, 10, 18, 0.35) 0%, rgba(6, 10, 18, 0.55) 35%, rgba(6, 10, 18, 0.78) 70%, rgba(6, 10, 18, 0.88) 100%),
+					radial-gradient(900px 520px at 18% 25%, rgba(255, 214, 160, 0.28), transparent 60%),
+					linear-gradient(180deg, rgba(6, 10, 18, 0.25) 0%, rgba(6, 10, 18, 0.60) 70%, rgba(6, 10, 18, 0.78) 100%);
+				pointer-events: none;
 			}
-			.hero .panel { background: transparent; border: 0; box-shadow: none; padding: 0; }
-			.bgOverlay { display: none; } /* kept for compatibility */
+			.heroInner { position: relative; }
 
 			/* Brand / logo */
 			.brand {
@@ -273,42 +239,45 @@ import { SITE_TITLE } from '../consts';
 				align-items: center;
 				gap: 12px;
 				margin-bottom: 18px;
-				opacity: 0.95;
 			}
 			.logo {
 				display: inline-flex;
-				width: 40px;
-				height: 40px;
+				width: 44px;
+				height: 44px;
 				align-items: center;
 				justify-content: center;
 				border-radius: 14px;
-				background: rgba(255, 255, 255, 0.06);
-				border: 1px solid rgba(255, 255, 255, 0.14);
+				background: rgba(255, 255, 255, 0.10);
+				border: 1px solid rgba(255, 255, 255, 0.22);
+				backdrop-filter: blur(10px);
+				-webkit-backdrop-filter: blur(10px);
 			}
 			.brandName {
 				font-size: 13px;
-				letter-spacing: 0.12em;
+				letter-spacing: 0.14em;
 				text-transform: uppercase;
-				opacity: 0.85;
+				opacity: 0.90;
 			}
 
-			/* Type scale */
+			/* Type */
 			h1 {
-				font-size: clamp(44px, 6vw, 78px);
+				font-size: clamp(44px, 6vw, 84px);
 				line-height: 1.02;
 				letter-spacing: -0.035em;
 				margin: 0 0 14px;
-				max-width: 16ch;
+				max-width: 18ch;
+				text-shadow: 0 14px 40px rgba(0,0,0,0.45);
 			}
 			.tagline {
-				font-size: clamp(18px, 2.2vw, 24px);
+				font-size: clamp(18px, 2.2vw, 26px);
 				margin: 0 0 22px;
-				opacity: 0.90;
-				max-width: 50ch;
+				opacity: 0.96;
+				max-width: 60ch;
+				text-shadow: 0 10px 28px rgba(0,0,0,0.35);
 			}
 
 			h2 {
-				font-size: clamp(22px, 2.6vw, 30px);
+				font-size: clamp(24px, 3vw, 34px);
 				letter-spacing: -0.02em;
 				margin: 0 0 14px;
 			}
@@ -317,15 +286,15 @@ import { SITE_TITLE } from '../consts';
 				letter-spacing: 0.14em;
 				text-transform: uppercase;
 				margin: 0 0 12px;
-				opacity: 0.75;
+				opacity: 0.78;
 			}
 			p { margin: 0 0 14px; }
-			.lead { font-size: 18px; opacity: 0.92; max-width: 75ch; }
-			.muted { opacity: 0.78; max-width: 80ch; }
+			.lead { font-size: 18px; opacity: 0.92; max-width: 78ch; }
+			.muted { opacity: 0.78; max-width: 86ch; }
 			a { color: inherit; text-underline-offset: 4px; }
 
 			/* Buttons */
-			.heroActions, .formActions {
+			.actions {
 				display: flex;
 				gap: 12px;
 				flex-wrap: wrap;
@@ -339,65 +308,117 @@ import { SITE_TITLE } from '../consts';
 				border-radius: 999px;
 				font-size: 14px;
 				text-decoration: none;
-				border: 1px solid rgba(255,255,255,0.16);
-				background: rgba(255,255,255,0.06);
+				border: 1px solid rgba(255,255,255,0.18);
+				background: rgba(255,255,255,0.08);
 				color: inherit;
 				cursor: pointer;
-				transition: transform 0.08s ease, background 0.15s ease, border-color 0.15s ease;
+				transition: transform 0.10s ease, background 0.16s ease, border-color 0.16s ease;
 			}
-			.btn:hover {
-				background: rgba(255,255,255,0.09);
-				transform: translateY(-1px);
-			}
+			.btn:hover { transform: translateY(-1px); background: rgba(255,255,255,0.12); }
 			.btn:active { transform: translateY(0px); }
 
-			/* Warm accent tuned to your sunset/orange image */
+			/* Warm accent for primary button (works with bridge sunset tones) */
 			.primary {
-				background: rgba(214, 147, 78, 0.20);
-				border-color: rgba(214, 147, 78, 0.42);
+				background: rgba(255, 214, 160, 0.18);
+				border-color: rgba(255, 214, 160, 0.42);
 			}
 			.primary:hover {
-				background: rgba(214, 147, 78, 0.26);
-				border-color: rgba(214, 147, 78, 0.52);
+				background: rgba(255, 214, 160, 0.24);
+				border-color: rgba(255, 214, 160, 0.55);
 			}
-			.ghost { background: rgba(255,255,255,0.04); }
+			.ghost { background: rgba(255,255,255,0.06); }
 
 			/* Lists */
-			.bullets {
-				margin: 10px 0 14px;
-				padding-left: 18px;
-				max-width: 78ch;
-			}
+			.bullets { margin: 10px 0 14px; padding-left: 18px; max-width: 86ch; }
 			.bullets li { margin: 10px 0; }
+			.bullets.compact li { margin: 8px 0; }
 
-			/* Who section layout */
+			/* ===== Unique slide backgrounds (no photo after slide 1) ===== */
+			/* 2: clean light-ish gradient */
+			.s2 {
+				color: #0c1220;
+				background:
+					radial-gradient(1100px 700px at 18% 20%, rgba(255,214,160,0.35), transparent 55%),
+					linear-gradient(180deg, #f6f7fb 0%, #eef1f9 100%);
+			}
+			.s2 a, .s2 .btn { color: #0c1220; }
+			.s2 .btn { border-color: rgba(12,18,32,0.14); background: rgba(12,18,32,0.04); }
+			.s2 .btn:hover { background: rgba(12,18,32,0.06); }
+			.s2 .primary { background: rgba(12,18,32,0.92); border-color: rgba(12,18,32,0.92); color: #fff; }
+			.s2 .primary:hover { background: rgba(12,18,32,0.86); }
+
+			/* 3: deep navy */
+			.s3 {
+				background:
+					radial-gradient(900px 520px at 20% 15%, rgba(255,214,160,0.14), transparent 60%),
+					linear-gradient(180deg, #0b1020 0%, #070a14 100%);
+			}
+
+			/* 4: charcoal + subtle grid feel */
+			.s4 {
+				background:
+					radial-gradient(900px 520px at 20% 10%, rgba(255,214,160,0.10), transparent 60%),
+					linear-gradient(180deg, #0a0d12 0%, #06070b 100%);
+			}
+			/* tiny pattern */
+			.s4::after {
+				content: "";
+				position: absolute;
+				inset: 0;
+				background-image:
+					linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+					linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+				background-size: 44px 44px;
+				opacity: 0.20;
+				pointer-events: none;
+			}
+
+			/* 5: muted “warm” slate */
+			.s5 {
+				background:
+					radial-gradient(1000px 620px at 18% 18%, rgba(255,214,160,0.16), transparent 55%),
+					linear-gradient(180deg, #0f141b 0%, #0a0d12 100%);
+			}
+
+			/* 6: slightly brighter, focused for form */
+			.s6 {
+				background:
+					radial-gradient(1100px 700px at 18% 20%, rgba(255,214,160,0.18), transparent 55%),
+					linear-gradient(180deg, #0b1020 0%, #070a14 100%);
+			}
+
+			/* Who cards */
 			.twoCol {
 				display: grid;
 				grid-template-columns: 1fr 1fr;
-				gap: 14px;
-				margin-top: 16px;
+				gap: 16px;
+				margin-top: 18px;
 			}
 			.card {
-				border: 1px solid rgba(255,255,255,0.10);
+				border: 1px solid rgba(255,255,255,0.12);
 				background: rgba(255,255,255,0.04);
-				border-radius: 18px;
+				border-radius: 20px;
 				padding: 18px;
+				backdrop-filter: blur(10px);
+				-webkit-backdrop-filter: blur(10px);
+			}
+			/* Cards on light slide (s2) */
+			.s2 .card {
+				border-color: rgba(12,18,32,0.12);
+				background: rgba(255,255,255,0.65);
 			}
 
-			/* Contact */
-			.emailLine { margin-top: 6px; margin-bottom: 16px; }
+			/* Contact form */
+			.contactTop { margin-top: 4px; }
+			.emailLine { margin: 8px 0 16px; }
 
 			.form {
 				margin-top: 18px;
+				max-width: 1000px; /* wider (no “book” feel) */
 				padding-top: 16px;
-				border-top: 1px solid rgba(255,255,255,0.10);
-				max-width: 920px;
+				border-top: 1px solid rgba(255,255,255,0.12);
 			}
-			.row {
-				display: grid;
-				grid-template-columns: 1fr 1fr;
-				gap: 12px;
-			}
+			.row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 			label {
 				display: grid;
 				gap: 8px;
@@ -411,22 +432,25 @@ import { SITE_TITLE } from '../consts';
 				border-radius: 14px;
 				border: 1px solid rgba(255,255,255,0.16);
 				background: rgba(0,0,0,0.22);
-				color: #eef3ff;
+				color: #eaf0ff;
 				outline: none;
 			}
+			.s2 input, .s2 textarea {
+				background: rgba(12,18,32,0.04);
+				border-color: rgba(12,18,32,0.14);
+				color: #0c1220;
+			}
 			input:focus, textarea:focus {
-				border-color: rgba(214, 147, 78, 0.55);
-				box-shadow: 0 0 0 4px rgba(214, 147, 78, 0.18);
+				border-color: rgba(255, 214, 160, 0.55);
+				box-shadow: 0 0 0 4px rgba(255, 214, 160, 0.18);
 			}
 
-			/* Mobile */
-			@media (max-width: 900px) {
-				.slide { padding: 64px 22px; }
+			/* Responsive */
+			@media (max-width: 980px) {
 				.twoCol { grid-template-columns: 1fr; }
 				.row { grid-template-columns: 1fr; }
 			}
 
-			/* Reduce motion for accessibility */
 			@media (prefers-reduced-motion: reduce) {
 				:global(html) { scroll-behavior: auto; }
 				.btn { transition: none; }
