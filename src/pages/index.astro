@@ -35,26 +35,41 @@ import { SITE_TITLE } from '../consts';
 			</section>
 
 			<!-- SLIDE 2 -->
-			<section class="slide s2" id="what" aria-label="What We Do">
-			  <div class="inner whatInner">
-			    <div class="whatGrid">
-			      <div class="whatLeft">
-			        <span class="sectionKicker">What we do</span>
-			        <h2 class="whatTitle">Strategic, founder-led AI and research-to-product advisory.</h2>
+			<section class="slide s2" id="what">
+			  <div class="inner s2Inner">
+			    <div class="s2Layout">
+			      <!-- LEFT -->
+			      <div class="s2Left">
+			        <p class="s2Kicker">What we do</p>
 			
-			        <p class="whatBody">
+			        <h2 class="s2Headline">
+			          Strategic, founder-led AI and
+			          <span class="nowrap">research-to-product</span> advisory.
+			        </h2>
+			
+			        <p class="s2Body">
 			          We help founders, freelancers, and researchers turn complex ideas, research, and early demos into credible AI products
 			          and industry-ready systems.
 			        </p>
+			
+			        <div class="s2Chips" aria-label="Focus areas">
+			          <span class="s2Chip">Product direction</span>
+			          <span class="s2Chip">AI architecture</span>
+			          <span class="s2Chip">MVP scoping</span>
+			          <span class="s2Chip">Evaluation strategy</span>
+			          <span class="s2Chip">Risk review</span>
+			        </div>
 			      </div>
 			
-			      <aside class="whatRight" aria-label="Focus">
-			        <div class="focusCard">
-			          <p class="focusTitle">Focus</p>
-			          <p class="focusText">
-			            Our focus is clarity, direction, and decision-making, not outsourced execution.
-			          </p>
-			        </div>
+			      <!-- DIVIDER -->
+			      <div class="s2Divider" aria-hidden="true"></div>
+			
+			      <!-- RIGHT -->
+			      <aside class="s2FocusCard" aria-label="Focus">
+			        <p class="s2FocusLabel">Focus</p>
+			        <p class="s2FocusText">
+			          Our focus is clarity, direction, and decision-making, not outsourced execution.
+			        </p>
 			      </aside>
 			    </div>
 			  </div>
@@ -293,70 +308,69 @@ import { SITE_TITLE } from '../consts';
 			.bullets li { margin: 10px 0; }
 			.bullets.compact li { margin: 8px 0; }
 
-			/* SLIDE 2 — upgraded layout */
-			.s2{
-			  color:#0c1220;
-			  position: relative;
-			  background:
-			    radial-gradient(1200px 700px at 15% 18%, rgba(255,214,160,0.45), transparent 58%),
-			    radial-gradient(900px 520px at 85% 30%, rgba(130,180,255,0.22), transparent 55%),
-			    linear-gradient(180deg, #f7f8fc 0%, #edf1fb 100%);
+			/* ===== Slide 2 layout upgrades ===== */
+			.s2Inner { display: grid; align-items: start; }
+			
+			/* Pull content up a bit (reduce “empty top” feeling) */
+			.s2Layout {
+			  display: grid;
+			  grid-template-columns: 1.25fr 1px 0.9fr;
+			  gap: 32px;
+			  align-items: start;
+			  margin-top: clamp(10px, 2vh, 28px);
 			}
 			
-			/* subtle top “edge” so it feels like a deck panel */
-			.s2::before{
-			  content:"";
-			  position:absolute;
-			  left:0; right:0; top:0;
-			  height:1px;
-			  background: linear-gradient(90deg, transparent, rgba(12,18,32,0.10), transparent);
-			}
+			.s2Left { max-width: 78ch; }
 			
-			/* Left alignment + controlled width */
-			.whatInner { max-width: 1500px; }
-			.whatGrid{
-			  display:grid;
-			  grid-template-columns: 1.25fr 0.75fr;
-			  gap: clamp(18px, 4vw, 56px);
-			  align-items: center;
-			}
-			
-			/* Typography hierarchy */
-			.sectionKicker{
-			  display:inline-flex;
+			.s2Kicker {
+			  margin: 0 0 12px;
 			  font-size: 12px;
 			  letter-spacing: 0.18em;
 			  text-transform: uppercase;
-			  opacity: 0.7;
-			  margin-bottom: 14px;
+			  opacity: 0.72;
 			}
 			
-			.whatTitle{
-			  margin: 0 0 16px;
-			  font-size: clamp(34px, 4vw, 54px);
-			  line-height: 1.05;
+			.s2Headline {
+			  margin: 0 0 14px;
+			  font-size: clamp(44px, 4.4vw, 64px);
+			  line-height: 1.04;
 			  letter-spacing: -0.03em;
-			  max-width: 24ch;
+			  max-width: 22ch; /* forces cleaner breaks */
 			}
 			
-			.whatBody{
+			.nowrap { white-space: nowrap; }
+			
+			.s2Body {
 			  margin: 0;
-			  font-size: clamp(18px, 1.6vw, 22px);
-			  line-height: 1.55;
-			  max-width: 78ch;
+			  font-size: 18px;
+			  line-height: 1.6;
 			  opacity: 0.92;
+			  max-width: 74ch;
 			}
 			
-			/* Focus card */
-			.focusCard{
-			  border-radius: 22px;
+			/* subtle relationship cue */
+			.s2Divider {
+			  width: 1px;
+			  align-self: stretch;
+			  background: linear-gradient(
+			    to bottom,
+			    rgba(12,18,32,0.00),
+			    rgba(12,18,32,0.14),
+			    rgba(12,18,32,0.00)
+			  );
+			  opacity: 0.9;
+			}
+			
+			.s2FocusCard {
+			  border-radius: 18px;
 			  padding: 22px 22px;
-			  background: rgba(255,255,255,0.75);
+			  background: rgba(255,255,255,0.78);
 			  border: 1px solid rgba(12,18,32,0.10);
-			  box-shadow: 0 18px 44px rgba(12,18,32,0.08);
+			  box-shadow: 0 10px 30px rgba(12,18,32,0.08);
+			  max-width: 560px;
 			}
 			
-			.focusTitle{
+			.s2FocusLabel {
 			  margin: 0 0 10px;
 			  font-size: 12px;
 			  letter-spacing: 0.18em;
@@ -364,17 +378,37 @@ import { SITE_TITLE } from '../consts';
 			  opacity: 0.7;
 			}
 			
-			.focusText{
+			.s2FocusText {
 			  margin: 0;
 			  font-size: 18px;
-			  line-height: 1.55;
-			  color: rgba(12,18,32,0.92);
+			  line-height: 1.6;
+			  opacity: 0.92;
 			}
 			
-			/* Responsive */
-			@media (max-width: 980px){
-			  .whatGrid{ grid-template-columns: 1fr; }
-			  .whatTitle{ max-width: 100%; }
+			/* chips = make slide feel designed */
+			.s2Chips {
+			  display: flex;
+			  flex-wrap: wrap;
+			  gap: 10px;
+			  margin-top: 18px;
+			}
+			
+			.s2Chip {
+			  display: inline-flex;
+			  align-items: center;
+			  padding: 9px 12px;
+			  border-radius: 999px;
+			  font-size: 13px;
+			  border: 1px solid rgba(12,18,32,0.10);
+			  background: rgba(255,255,255,0.55);
+			  color: #0c1220;
+			}
+			
+			/* responsive */
+			@media (max-width: 980px) {
+			  .s2Layout { grid-template-columns: 1fr; gap: 18px; }
+			  .s2Divider { display: none; }
+			  .s2FocusCard { max-width: 100%; }
 			}
 
 			.s3 {
