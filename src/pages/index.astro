@@ -29,54 +29,15 @@ import { SITE_TITLE } from '../consts';
 
 					<div class="actions heroActions">
 						<a class="btn primary" href="#contact">Contact</a>
-						<a class="btn ghost" href="#what">What We Do</a>
+						<a class="btn ghost" href="#help">How We Help</a>
 					</div>
 				</div>
 			</section>
 
-			<!-- SLIDE 2 -->
-			<section class="slide s2" id="what">
-			  <div class="inner s2Inner">
-			    <div class="s2Layout">
-			      <!-- LEFT -->
-			      <div class="s2Left">
-			        <p class="s2Kicker">What we do</p>
+			<!-- SLIDE 2 REMOVED -->
 
-			        <h2 class="s2Headline">
-			          Strategic, founder-led AI and
-			          <span class="nowrap">research-to-product</span> advisory.
-			        </h2>
-
-			        <p class="s2Body">
-			          We help founders, freelancers, and researchers turn complex ideas, research, and early demos into credible AI products
-			          and industry-ready systems.
-			        </p>
-
-			        <div class="s2Chips" aria-label="Focus areas">
-			          <span class="s2Chip">Product direction</span>
-			          <span class="s2Chip">AI architecture</span>
-			          <span class="s2Chip">MVP scoping</span>
-			          <span class="s2Chip">Evaluation strategy</span>
-			          <span class="s2Chip">Risk review</span>
-			        </div>
-			      </div>
-
-			      <!-- DIVIDER -->
-			      <div class="s2Divider" aria-hidden="true"></div>
-
-			      <!-- RIGHT -->
-			      <aside class="s2FocusCard" aria-label="Focus">
-			        <p class="s2FocusLabel">Focus</p>
-			        <p class="s2FocusText">
-			          Our focus is clarity, direction, and decision-making, not outsourced execution.
-			        </p>
-			      </aside>
-			    </div>
-			  </div>
-			</section>
-
-			<!-- SLIDE 3 (REDESIGNED) -->
-			<section class="slide s3" aria-label="How We Help">
+			<!-- SLIDE 3 (How We Help) -->
+			<section class="slide s3" id="help" aria-label="How We Help">
 				<div class="inner s3Inner">
 					<div class="s3Layout">
 						<!-- LEFT: framing -->
@@ -129,9 +90,7 @@ import { SITE_TITLE } from '../consts';
 				</div>
 			</section>
 
-			<!-- SLIDE 4 REMOVED -->
-
-			<!-- SLIDE 5 (REDESIGNED: ONLY "WHO WE WORK WITH") -->
+			<!-- SLIDE 5 -->
 			<section class="slide s5" aria-label="Who We Work With">
 				<div class="inner s5Inner">
 					<div class="s5Layout">
@@ -160,7 +119,7 @@ import { SITE_TITLE } from '../consts';
 				</div>
 			</section>
 
-			<!-- SLIDE 6 (REDESIGNED) -->
+			<!-- SLIDE 6 (Contact) -->
 			<section class="slide s6" id="contact" aria-label="Contact">
 				<div class="inner contactInner">
 					<div class="contactGrid">
@@ -277,7 +236,7 @@ import { SITE_TITLE } from '../consts';
 				font-weight: 700;
 				letter-spacing: -0.04em;
 				margin: 0 0 18px;
-				color: #eaf0ff; /* cool white */
+				color: #eaf0ff;
 				text-shadow: 0 18px 50px rgba(0,0,0,0.55);
 			}
 
@@ -289,7 +248,7 @@ import { SITE_TITLE } from '../consts';
 				text-shadow: 0 12px 30px rgba(0,0,0,0.45);
 			}
 
-			/* Buttons: bigger text + perfect centering + no underline */
+			/* Buttons */
 			.actions { display: flex; gap: 16px; margin-top: 28px; }
 
 			.btn {
@@ -329,85 +288,8 @@ import { SITE_TITLE } from '../consts';
 				letter-spacing: -0.02em;
 				margin: 0 0 14px;
 			}
-			h3 {
-				font-size: 12px;
-				letter-spacing: 0.14em;
-				text-transform: uppercase;
-				margin: 0 0 12px;
-				opacity: 0.78;
-			}
 
-			/* ===== Slide 2 (kept) ===== */
-			.s2 {
-			  background:
-			    radial-gradient(1100px 700px at 18% 20%, rgba(255,214,160,0.35), transparent 55%),
-			    linear-gradient(180deg, #f6f7fb 0%, #eef1f9 100%) !important;
-			  color: #0c1220 !important;
-			}
-			.s2 *,
-			.s2 h2,
-			.s2 p,
-			.s2 li {
-			  color: #0c1220 !important;
-			}
-
-			.s2 .kicker,
-			.s2Kicker {
-			  font-size: 12px;
-			  letter-spacing: 0.16em;
-			  text-transform: uppercase;
-			  opacity: 0.7;
-			  margin-bottom: 14px;
-			}
-
-			.s2 h2 {
-			  font-size: clamp(44px, 5vw, 64px);
-			  line-height: 1.05;
-			  letter-spacing: -0.03em;
-			  margin-bottom: 18px;
-			}
-
-			.s2 .lead {
-			  font-size: 20px;
-			  max-width: 80ch;
-			  opacity: 0.95;
-			}
-
-			.s2 p {
-			  max-width: 82ch;
-			  opacity: 0.9;
-			}
-
-			.s2FocusCard {
-			  background: rgba(255,255,255,0.92);
-			  border: 1px solid rgba(12,18,32,0.10);
-			  border-radius: 18px;
-			  padding: 22px 26px;
-			  box-shadow: 0 16px 40px rgba(12,18,32,0.12);
-			}
-
-			.s2Chip {
-			  display: inline-flex;
-			  padding: 8px 14px;
-			  border-radius: 999px;
-			  border: 1px solid rgba(12,18,32,0.14);
-			  background: rgba(255,255,255,0.75);
-			  color: #0c1220;
-			  font-size: 13px;
-			  opacity: 0.95;
-			}
-
-			.s2Divider {
-			  width: 1px;
-			  background: linear-gradient(
-			    to bottom,
-			    rgba(12,18,32,0.00),
-			    rgba(12,18,32,0.18),
-			    rgba(12,18,32,0.00)
-			  );
-			}
-
-			/* ===== Slide 3 (readable) ===== */
+			/* ===== Slide 3 (How We Help) ===== */
 			.s3 {
 				background:
 					radial-gradient(900px 520px at 20% 15%, rgba(255,214,160,0.14), transparent 60%),
@@ -485,7 +367,7 @@ import { SITE_TITLE } from '../consts';
 				color: rgba(255,255,255,0.78);
 			}
 
-			/* ===== Slide 5 (readable, single bubble) ===== */
+			/* ===== Slide 5 (Who We Work With) ===== */
 			.s5 {
 				background:
 					radial-gradient(1000px 620px at 18% 18%, rgba(255,214,160,0.16), transparent 55%),
@@ -560,17 +442,19 @@ import { SITE_TITLE } from '../consts';
 				font-size: 14px;
 			}
 
-			/* ===== Slide 6 (redesigned contact) ===== */
+			/* ===== Slide 6 (Contact) ===== */
 			.s6 {
 				background:
 					radial-gradient(1100px 700px at 18% 20%, rgba(255,214,160,0.18), transparent 55%),
 					linear-gradient(180deg, #0b1020 0%, #070a14 100%);
 			}
 
+			/* Slide 6 title */
 			.s6 h2 {
 			  color: rgba(255,255,255,0.96) !important;
 			  text-shadow: 0 18px 50px rgba(0,0,0,0.45);
 			}
+
 			.contactInner { max-width: 1400px; }
 
 			.contactGrid {
@@ -588,7 +472,6 @@ import { SITE_TITLE } from '../consts';
 
 			.contactNote { margin-top: 8px; }
 
-			/* Form as a readable “bubble” */
 			.contactCard {
 				border: 1px solid rgba(255,255,255,0.14);
 				background: rgba(255,255,255,0.06);
