@@ -10,113 +10,180 @@ import { SITE_TITLE } from '../consts';
 	<head>
 		<BaseHead
 			title={`Bridgeit Advisory | ${SITE_TITLE}`}
-			description="Bridging research and ideas into real AI products."
+			description="Bridging research and real-world AI products."
 		/>
 	</head>
 
 	<body>
 		<Header />
 
-		<main class="container">
-			<section class="hero">
-				<h1>Bridgeit Advisory</h1>
-				<p class="tagline">Bridging research and real-world AI products.</p>
+		<main class="snap">
+			<!-- HERO -->
+			<section class="panel hero" aria-label="Hero">
+				<div class="heroOverlay"></div>
 
-				<div class="actions">
-					<a class="btn primary" href="#contact">Book an exploratory call</a>
-					<a class="btn ghost" href="#what-we-do">What we do</a>
-				</div>
-
-				<p class="micro">
-					Founder-led. Intentionally limited capacity.
-				</p>
-			</section>
-
-			<section class="block" id="what-we-do">
-				<h2>What We Do</h2>
-				<p class="lead">
-					Strategic, founder-led AI and research-to-product advisory.
-				</p>
-				<p>
-					We help founders, freelancers, and researchers turn complex ideas, research, and early demos into
-					credible AI products and industry-ready systems.
-				</p>
-				<p class="muted">
-					Our focus is clarity, direction, and decision-making — not outsourced execution.
-				</p>
-			</section>
-
-			<section class="block">
-				<h2>How We Help</h2>
-				<ul class="list">
-					<li>Translate research or ideas into concrete product directions</li>
-					<li>Advise on applied AI architecture and system-level decisions</li>
-					<li>Scope MVPs: what to build, validate, or discard</li>
-					<li>Review demos, experiments, and early prototypes</li>
-					<li>Identify technical, data, and evaluation risks early</li>
-				</ul>
-				<p class="muted">
-					The goal is to avoid building the wrong thing and move faster with confidence.
-				</p>
-			</section>
-
-			<section class="block">
-				<h2>How We Work</h2>
-				<p class="lead">
-					We start with an exploratory conversation to understand context, goals, and constraints.
-				</p>
-				<p>
-					For teams that find value, we continue through hourly strategic advisory, delivered via:
-				</p>
-				<ul class="list">
-					<li>Live discussions</li>
-					<li>Async review of documents, designs, experiments, or prototypes</li>
-				</ul>
-				<p class="note">
-					Work is founder-led and intentionally limited to ensure depth and quality.
-				</p>
-			</section>
-
-			<section class="block">
-				<h2>Who We Work With</h2>
-
-				<div class="twoCol">
-					<div class="card">
-						<h3>We work with</h3>
-						<ul class="list">
-							<li>Startup founders building AI-driven products</li>
-							<li>Freelancers and independent builders</li>
-							<li>PhDs, postdocs, and MScs transitioning to industry</li>
-							<li>Research-driven teams validating applied directions</li>
-						</ul>
+				<div class="content">
+					<div class="kicker">
+						<span class="mark" aria-hidden="true">
+							<!-- Simple “bridge” mark -->
+							<svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+								<path d="M4 18V6M20 18V6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+								<path d="M6 18h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+								<path d="M6 13c2.5-4 9.5-4 12 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+							</svg>
+						</span>
+						<span>Bridgeit Advisory</span>
 					</div>
 
-					<div class="card">
-						<h3>We do not work with</h3>
-						<ul class="list">
-							<li>Large enterprises</li>
-							<li>Outsourced implementation projects</li>
-							<li>Teams looking for full development or delivery</li>
-						</ul>
+					<h1>
+						Bridging research and real-world AI products.
+					</h1>
+
+					<p class="lede">
+						Strategic, founder-led advisory for founders, builders, and researchers turning complex ideas and early demos
+						into credible AI systems.
+					</p>
+
+					<div class="actions">
+						<a class="btn primary" href="#contact">Send a message</a>
+						<a class="btn ghost" href="#what">How we help</a>
+					</div>
+
+					<p class="micro">Founder-led. Intentionally limited capacity.</p>
+				</div>
+			</section>
+
+			<!-- WHAT -->
+			<section class="panel" id="what" aria-label="What we do">
+				<div class="content">
+					<h2>What We Do</h2>
+					<p class="lede">
+						Bridgeit provides strategic AI and research-to-product advisory.
+					</p>
+					<p>
+						We help founders, freelancers, and researchers translate ideas, research, and early demos into product direction,
+						system design, and industry-ready delivery plans.
+					</p>
+					<p class="muted">
+						Our focus is clarity, direction, and decision-making — not outsourced execution.
+					</p>
+
+					<div class="chips" aria-label="Focus areas">
+						<span class="chip">Product direction</span>
+						<span class="chip">AI architecture</span>
+						<span class="chip">MVP scoping</span>
+						<span class="chip">Evaluation strategy</span>
+						<span class="chip">Risk review</span>
 					</div>
 				</div>
 			</section>
 
-			<section class="block cta" id="contact">
-				<h2>Contact</h2>
-				<p class="lead">
-					Exploratory conversations are available by referral or direct outreach.
-				</p>
+			<!-- HOW -->
+			<section class="panel" aria-label="How we help">
+				<div class="content">
+					<h2>How We Help</h2>
 
-				<div class="contact">
-					<a class="contactLink" href="mailto:contact@bridgeitadvisory.com">
-						contact@bridgeitadvisory.com
-					</a>
+					<div class="grid">
+						<div class="card">
+							<h3>Translate ideas → product direction</h3>
+							<p>Turn research or demos into a concrete product path and what to validate first.</p>
+						</div>
+						<div class="card">
+							<h3>Architecture & system decisions</h3>
+							<p>RAG vs fine-tune, data strategy, eval design, deployment constraints, and tradeoffs.</p>
+						</div>
+						<div class="card">
+							<h3>MVP scoping</h3>
+							<p>What to build now, what to defer, what to discard — so you don’t overbuild.</p>
+						</div>
+						<div class="card">
+							<h3>Review prototypes</h3>
+							<p>Hands-on feedback on experiments, demos, prompts, retrieval setup, and evaluation.</p>
+						</div>
+						<div class="card">
+							<h3>Risk identification</h3>
+							<p>Surface technical, data, and evaluation risks early — before they become months.</p>
+						</div>
+						<div class="card">
+							<h3>Next steps</h3>
+							<p>Leave with a 1–4 week plan you can execute immediately with confidence.</p>
+						</div>
+					</div>
+
+					<p class="muted" style="margin-top: 18px;">
+						The goal is to avoid building the wrong thing and move faster with confidence.
+					</p>
 				</div>
+			</section>
 
-				<p class="muted small">
-					Include 3–5 lines about what you’re building and where you’re stuck.
-				</p>
+			<!-- WHO -->
+			<section class="panel" aria-label="Who we work with">
+				<div class="content">
+					<h2>Who We Work With</h2>
+
+					<div class="twoCol">
+						<div class="card soft">
+							<h3>We work with</h3>
+							<ul>
+								<li>Startup founders building AI-driven products</li>
+								<li>Freelancers and independent builders</li>
+								<li>PhDs, postdocs, and MScs transitioning to industry</li>
+								<li>Research-driven teams validating applied directions</li>
+							</ul>
+						</div>
+
+						<div class="card soft">
+							<h3>We do not work with</h3>
+							<ul>
+								<li>Large enterprises</li>
+								<li>Outsourced implementation projects</li>
+								<li>Teams looking for full development or delivery</li>
+							</ul>
+						</div>
+					</div>
+
+					<p class="note">If you’re unsure, send a short note — we’ll tell you quickly if it’s a fit.</p>
+				</div>
+			</section>
+
+			<!-- CONTACT -->
+			<section class="panel contact" id="contact" aria-label="Contact">
+				<div class="content">
+					<h2>How can we help?</h2>
+					<p class="lede">Send a short message. Include what you’re building, and where you’re stuck.</p>
+
+					<!-- OPTION A (recommended): Formspree -->
+					<!-- 1) Create a Formspree form -> get your endpoint URL -->
+					<!-- 2) Replace ACTION below -->
+					<form class="form" method="POST" action="https://formspree.io/f/REPLACE_ME">
+						<div class="row">
+							<label>
+								Name
+								<input name="name" type="text" required placeholder="Your name" />
+							</label>
+							<label>
+								Email
+								<input name="email" type="email" required placeholder="you@company.com" />
+							</label>
+						</div>
+
+						<label>
+							Message
+							<textarea name="message" rows="6" required placeholder="3–5 lines is enough."></textarea>
+						</label>
+
+						<div class="actions">
+							<button class="btn primary" type="submit">Send</button>
+							<a class="btn ghost" href="mailto:contact@bridgeitadvisory.com">Or email us</a>
+						</div>
+
+						<p class="micro">We typically reply within 24–48 hours.</p>
+					</form>
+
+					<p class="muted" style="margin-top: 18px;">
+						Prefer email: <a href="mailto:contact@bridgeitadvisory.com">contact@bridgeitadvisory.com</a>
+					</p>
+				</div>
 			</section>
 		</main>
 
@@ -124,93 +191,182 @@ import { SITE_TITLE } from '../consts';
 
 		<style>
 			:global(html) { scroll-behavior: smooth; }
-			:global(body) { background: #fff; color: #0b0f17; }
+			:global(body) {
+				margin: 0;
+				background: #070a0f;
+				color: #e9eefc;
+			}
 
-			.container { max-width: 980px; margin: 0 auto; padding: 0 22px 64px; }
+			/* Slide behavior */
+			.snap { scroll-snap-type: y mandatory; }
+			.panel {
+				min-height: 100vh;
+				display: grid;
+				place-items: center;
+				scroll-snap-align: start;
+				padding: 80px 22px;
+				background: radial-gradient(1200px 600px at 20% 0%, rgba(255,255,255,0.06), transparent 60%),
+				            linear-gradient(180deg, rgba(255,255,255,0.02), transparent 60%);
+				border-top: 1px solid rgba(255,255,255,0.06);
+			}
 
-			/* HERO */
-			.hero { padding: 110px 0 80px; }
-			.hero h1 { font-size: 64px; letter-spacing: -0.03em; margin: 0 0 16px; }
-			.tagline { font-size: 22px; max-width: 46ch; margin: 0 0 22px; opacity: 0.88; }
+			.content {
+				width: 100%;
+				max-width: 980px;
+			}
 
-			.actions { display: flex; gap: 12px; flex-wrap: wrap; margin: 8px 0 14px; }
+			/* Hero */
+			.hero {
+				position: relative;
+				border-top: 0;
+				background-image: url('/hero-bridge.jpg');
+				background-size: cover;
+				background-position: center;
+			}
+			.heroOverlay {
+				position: absolute;
+				inset: 0;
+				background: linear-gradient(90deg, rgba(7,10,15,0.92) 0%, rgba(7,10,15,0.72) 48%, rgba(7,10,15,0.35) 100%),
+				            radial-gradient(900px 500px at 20% 20%, rgba(245,201,130,0.12), transparent 60%);
+			}
+			.hero .content { position: relative; }
+			.kicker {
+				display: inline-flex;
+				gap: 10px;
+				align-items: center;
+				font-size: 14px;
+				letter-spacing: 0.08em;
+				text-transform: uppercase;
+				opacity: 0.8;
+				margin-bottom: 18px;
+			}
+			.mark {
+				display: inline-flex;
+				width: 28px;
+				height: 28px;
+				align-items: center;
+				justify-content: center;
+				border-radius: 10px;
+				background: rgba(255,255,255,0.06);
+				border: 1px solid rgba(255,255,255,0.10);
+			}
+
+			h1 {
+				font-size: 64px;
+				letter-spacing: -0.03em;
+				line-height: 1.02;
+				margin: 0 0 16px;
+				max-width: 18ch;
+			}
+			h2 {
+				font-size: 28px;
+				letter-spacing: -0.02em;
+				margin: 0 0 14px;
+			}
+			h3 {
+				margin: 0 0 10px;
+				font-size: 14px;
+				letter-spacing: 0.1em;
+				text-transform: uppercase;
+				opacity: 0.8;
+			}
+
+			p { margin: 0 0 14px; }
+			.lede { font-size: 20px; max-width: 70ch; opacity: 0.92; }
+			.muted { opacity: 0.78; max-width: 80ch; }
+			.micro { opacity: 0.7; font-size: 13px; margin-top: 10px; }
+
+			a { color: inherit; text-underline-offset: 4px; }
+
+			.actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 18px; }
+
 			.btn {
 				display: inline-flex;
 				align-items: center;
 				justify-content: center;
-				padding: 10px 14px;
-				border-radius: 12px;
+				padding: 11px 14px;
+				border-radius: 14px;
 				font-size: 14px;
 				text-decoration: none;
-				border: 1px solid rgba(0,0,0,0.12);
+				border: 1px solid rgba(255,255,255,0.14);
+				background: rgba(255,255,255,0.04);
 				color: inherit;
-				opacity: 0.95;
+				cursor: pointer;
 			}
-			.btn:hover { opacity: 1; }
+			.btn:hover { background: rgba(255,255,255,0.06); }
+
 			.primary {
-				border-color: rgba(0,0,0,0.18);
-				background: rgba(0,0,0,0.92);
-				color: #fff;
+				background: rgba(245,201,130,0.18);
+				border-color: rgba(245,201,130,0.30);
 			}
-			.ghost { background: rgba(0,0,0,0.02); }
-
-			.micro { margin: 0; font-size: 13px; opacity: 0.7; }
-
-			/* SECTIONS */
-			.block { padding: 64px 0; border-top: 1px solid rgba(0,0,0,0.08); }
-			h2 { font-size: 18px; margin: 0 0 12px; letter-spacing: -0.01em; }
-			h3 {
-				font-size: 12px;
-				margin: 0 0 12px;
-				text-transform: uppercase;
-				letter-spacing: 0.12em;
-				opacity: 0.7;
+			.primary:hover {
+				background: rgba(245,201,130,0.24);
 			}
 
-			p { margin: 0 0 14px; }
-			.lead { font-size: 20px; max-width: 62ch; }
-			.muted { opacity: 0.82; max-width: 80ch; }
-			.small { font-size: 13px; margin-top: 8px; }
+			/* Chips */
+			.chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+			.chip {
+				font-size: 13px;
+				padding: 8px 10px;
+				border-radius: 999px;
+				border: 1px solid rgba(255,255,255,0.10);
+				background: rgba(255,255,255,0.03);
+				opacity: 0.9;
+			}
 
-			.list { margin: 0 0 14px; padding-left: 18px; max-width: 70ch; }
-			.list li { margin: 10px 0; }
-
-			.note { font-style: italic; opacity: 0.78; margin-top: 10px; }
-
-			/* WHO WE WORK WITH */
+			/* Cards / grids */
+			.grid {
+				display: grid;
+				grid-template-columns: repeat(3, minmax(0, 1fr));
+				gap: 14px;
+				margin-top: 18px;
+			}
 			.twoCol {
 				display: grid;
 				grid-template-columns: 1fr 1fr;
-				gap: 16px;
-				margin-top: 14px;
+				gap: 14px;
+				margin-top: 18px;
 			}
 			.card {
-				border: 1px solid rgba(0,0,0,0.08);
-				border-radius: 16px;
+				border: 1px solid rgba(255,255,255,0.10);
+				background: rgba(255,255,255,0.03);
+				border-radius: 18px;
 				padding: 18px;
-				background: rgba(0,0,0,0.02);
+			}
+			.card.soft { background: rgba(255,255,255,0.025); }
+
+			ul { margin: 0; padding-left: 18px; }
+			li { margin: 10px 0; opacity: 0.92; }
+
+			.note {
+				margin-top: 18px;
+				font-style: italic;
+				opacity: 0.75;
 			}
 
-			/* CONTACT */
-			.cta { border-top: 1px solid rgba(0,0,0,0.08); }
-			.contact { margin-top: 10px; }
-			.contactLink {
-				display: inline-flex;
-				padding: 10px 14px;
-				border-radius: 12px;
-				border: 1px solid rgba(0,0,0,0.12);
-				text-decoration: none;
-				color: inherit;
+			/* Form */
+			.form { margin-top: 18px; max-width: 760px; }
+			.row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+			label { display: grid; gap: 8px; font-size: 13px; opacity: 0.85; margin-bottom: 12px; }
+			input, textarea {
+				width: 100%;
+				padding: 12px 12px;
+				border-radius: 14px;
+				border: 1px solid rgba(255,255,255,0.14);
+				background: rgba(0,0,0,0.25);
+				color: #e9eefc;
+				outline: none;
 			}
-			.contactLink:hover { text-decoration: underline; text-underline-offset: 4px; }
+			input:focus, textarea:focus {
+				border-color: rgba(245,201,130,0.45);
+				box-shadow: 0 0 0 4px rgba(245,201,130,0.12);
+			}
 
-			/* RESPONSIVE */
-			@media (max-width: 820px) {
-				.hero { padding: 86px 0 58px; }
-				.hero h1 { font-size: 48px; }
-				.tagline { font-size: 18px; }
+			@media (max-width: 900px) {
+				h1 { font-size: 44px; }
+				.grid { grid-template-columns: 1fr; }
 				.twoCol { grid-template-columns: 1fr; }
-				.block { padding: 48px 0; }
+				.row { grid-template-columns: 1fr; }
 			}
 		</style>
 	</body>
